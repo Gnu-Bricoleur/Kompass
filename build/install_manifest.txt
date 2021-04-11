@@ -1,0 +1,2 @@
+/usr/share/applications/org.kde.hellokirigami.desktop
+/usr/bin/hellokirigami

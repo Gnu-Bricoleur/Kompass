@@ -1,0 +1,89 @@
+{
+	"BUILD_DIR" : "/home/sylvain/Documents/hellokirigami/build/src/hellokirigami_autogen",
+	"CMAKE_BINARY_DIR" : "/home/sylvain/Documents/hellokirigami/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/sylvain/Documents/hellokirigami/build/src",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/sylvain/Documents/hellokirigami/src",
+	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
+	"CMAKE_LIST_FILES" : 
+	[
+		"/home/sylvain/Documents/hellokirigami/src/CMakeLists.txt",
+		"/home/sylvain/Documents/hellokirigami/src/resources.qrc"
+	],
+	"CMAKE_SOURCE_DIR" : "/home/sylvain/Documents/hellokirigami",
+	"DEP_FILE" : "",
+	"DEP_FILE_RULE_NAME" : "",
+	"HEADERS" : [],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/home/sylvain/Documents/hellokirigami/build/src/hellokirigami_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/sylvain/Documents/hellokirigami/build/src/hellokirigami_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : 
+	[
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_NETWORK_LIB",
+		"QT_NO_DEBUG",
+		"QT_QMLMODELS_LIB",
+		"QT_QML_LIB",
+		"QT_QUICK_LIB",
+		"QT_SVG_LIB",
+		"QT_WIDGETS_LIB",
+		"_GNU_SOURCE",
+		"_LARGEFILE64_SOURCE"
+	],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/home/sylvain/Documents/hellokirigami/build/src",
+		"/home/sylvain/Documents/hellokirigami/src",
+		"/usr/include/qt",
+		"/usr/include/qt/QtCore",
+		"/usr/lib/qt/mkspecs/linux-g++",
+		"/usr/include/qt/QtQml",
+		"/usr/include/qt/QtNetwork",
+		"/usr/include/qt/QtQuick",
+		"/usr/include/qt/QtQmlModels",
+		"/usr/include/qt/QtGui",
+		"/usr/include/qt/QtSvg",
+		"/usr/include/qt/QtWidgets",
+		"/usr/include/c++/10.2.0",
+		"/usr/include/c++/10.2.0/aarch64-unknown-linux-gnu",
+		"/usr/include/c++/10.2.0/backward",
+		"/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/include",
+		"/usr/local/include",
+		"/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/include-fixed",
+		"/usr/include"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/c++",
+		"-dM",
+		"-E",
+		"-c",
+		"/usr/share/cmake-3.20/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/home/sylvain/Documents/hellokirigami/build/src/hellokirigami_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 1,
+	"PARSE_CACHE_FILE" : "/home/sylvain/Documents/hellokirigami/build/src/CMakeFiles/hellokirigami_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/usr/bin/moc",
+	"QT_UIC_EXECUTABLE" : "",
+	"QT_VERSION_MAJOR" : 5,
+	"QT_VERSION_MINOR" : 15,
+	"SETTINGS_FILE" : "/home/sylvain/Documents/hellokirigami/build/src/CMakeFiles/hellokirigami_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[ "/home/sylvain/Documents/hellokirigami/src/main.cpp", "Mu", null ]
+	],
+	"VERBOSITY" : 0
+}

@@ -1,0 +1,6 @@
+# Hashes of file build rules.
+4551bc7180bba9892ae959ce77ab0b4b CMakeFiles/fetch-translations
+5da9777b48c573ea711128393088406c CMakeFiles/uninstall
+42dee1a372b56e2ccccb1113fa50b667 releaseme
+f45e1e6ee5a63a40d57445c8bcc063ab src/CMakeFiles/hellokirigami_autogen
+539acd8e530c5f4c52878fc0a5cbaa6b src/qrc_resources.cpp
