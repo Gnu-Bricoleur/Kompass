@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Kompass
+Comment=Compass application
+Version=1.0
+Exec=kompass
+MimeType=application/x-compass;
+Icon=applications-development
+Type=Application
+Terminal=false
+Categories=Qt;KDE;
+Name[fr_FR]=org.kde.kompass.desktop

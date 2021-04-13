@@ -4,44 +4,24 @@ import QtQuick.Controls 2.0 as Controls
 
 Kirigami.ApplicationWindow {
     id: root
-
-    title: "Hello"
-
-//    pageStack.initialPage: mainPageComponent
-
-//    Component {
-//        id: mainPageComponent
-
-//        Kirigami.Page {
-//            title: "Hello"
-
-  //          Rectangle {
-    //            color: "yellow"
-      //          anchors.fill: parent
-         Column{      
+    title: "Kompass"
+         Column{
                 Controls.Label {
-                    text:  "Hello Kirigami"
+                    text:  "x"
                     color: "red"
-                   // anchors.centerIn: parent
                     objectName: "x" 
                }Controls.Label {
-                    text:  "Hello Kirigami"
+                    text:  "y"
                     color: "green"
-                   // anchors.centerIn: parent
                     objectName: "y" 
                }Controls.Label {
-                    text:  "Hello Kirigami"
+                    text:  "z"
                     color: "blue"
-                   // anchors.centerIn: parent
                     objectName: "z" 
                }Controls.Label {
-                    text:  "Hello Kirigami"
+                    text:  "vec"
                     color: "black"
-                   // anchors.centerIn: parent
                     objectName: "vec" 
                }
-}
-        //    }
-       // }
-   // }
+		}
 }

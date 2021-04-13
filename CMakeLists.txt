@@ -1,4 +1,4 @@
-project(hellokirigami)
+project(kompass)
 
 cmake_minimum_required(VERSION 2.8.12)
 set(KF5_MIN_VERSION "5.18.0")
@@ -50,7 +50,7 @@ find_package(PkgConfig)
 
 add_subdirectory(src)
 
-install(PROGRAMS org.kde.hellokirigami.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+install(PROGRAMS org.kde.kompass.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
