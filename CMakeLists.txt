@@ -41,6 +41,12 @@ if(UNIX)
    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -std=c++0x")
 endif()
 
+if (CMAKE_COMPILER_IS_GNUCC)
+    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DIIO_CHECK_RET")
+endif ()
+
+
+
 ################# now find all used packages #################
 
 set (QT_MIN_VERSION "5.6.0")
