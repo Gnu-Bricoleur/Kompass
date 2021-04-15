@@ -9,8 +9,27 @@
 #include <string>
 #include <stdlib.h>
 #include <stdio.h>
+#include <iio.h>
 
-using namespace std;
+static struct iio_context *ctx   = NULL;
+
+#define IIO_ENSURE(expr) { \
+	if (!(expr)) { \
+		(void) fprintf(stderr, "assertion failed (%s:%d)\n", __FILE__, __LINE__); \
+		(void) abort(); \
+	} \
+}
+
+
+/* returns LIS3MDL phy device */
+static struct iio_device* get_lis3mdl(struct iio_context *ctx)
+{
+	struct iio_device *dev =  iio_context_find_device(ctx, "lis3mdl");
+	IIO_ENSURE(dev && "No lis3mdl found");
+	return dev;
+}
+
+
 
 QObject *qmlx;
 QObject *qmly;
@@ -59,6 +78,20 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmly = rootObject->findChild<QObject*>("y");
     qmlz = rootObject->findChild<QObject*>("z");
     qDebug() << "Jusqu'ici tout va bien";
+
+
+
+    printf("* Acquiring IIO context\n");
+
+    IIO_ENSURE((ctx = iio_create_default_context()) && "No context");
+
+    IIO_ENSURE(iio_context_get_devices_count(ctx) > 0 && "No devices");
+
+
+
+
+
+
 
 
     QTimer timer;
