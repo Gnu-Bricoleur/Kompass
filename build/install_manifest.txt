@@ -1,0 +1,2 @@
+/usr/share/applications/org.kde.kompass.desktop
+/usr/bin/kompass
