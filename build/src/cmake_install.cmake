@@ -1,4 +1,4 @@
-# Install script for directory: /home/sylvain/Documents/Kompass/src
+# Install script for directory: /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -49,7 +49,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xkompassx" OR NOT CMAKE_INSTALL_COMP
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/kompass"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/sylvain/Documents/Kompass/build/src/kompass")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src/kompass")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/kompass" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/kompass")
     if(CMAKE_INSTALL_DO_STRIP)

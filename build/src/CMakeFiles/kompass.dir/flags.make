@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_SVG_LIB -DQT_WIDGETS_LIB -D_GNU_SOURCE -D_LARGEFILE64_SOURCE
 
-CXX_INCLUDES = -I/home/sylvain/Documents/Kompass/build/src -I/home/sylvain/Documents/Kompass/src -I/home/sylvain/Documents/Kompass/build/src/kompass_autogen/include -isystem /usr/include/qt -isystem /usr/include/qt/QtCore -isystem /usr/lib/qt/mkspecs/linux-g++ -isystem /usr/include/qt/QtQml -isystem /usr/include/qt/QtNetwork -isystem /usr/include/qt/QtQuick -isystem /usr/include/qt/QtQmlModels -isystem /usr/include/qt/QtGui -isystem /usr/include/qt/QtSvg -isystem /usr/include/qt/QtWidgets
+CXX_INCLUDES = -I/home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src -I/home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/src -I/home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src/kompass_autogen/include -isystem /usr/include/qt -isystem /usr/include/qt/QtCore -isystem /usr/lib/qt/mkspecs/linux-g++ -isystem /usr/include/qt/QtQml -isystem /usr/include/qt/QtNetwork -isystem /usr/include/qt/QtQuick -isystem /usr/include/qt/QtQmlModels -isystem /usr/include/qt/QtGui -isystem /usr/include/qt/QtSvg -isystem /usr/include/qt/QtWidgets
 
 CXX_FLAGS =  -fno-operator-names -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -Wall -std=c++0x -g -fvisibility=hidden -fvisibility-inlines-hidden -fPIC -std=gnu++11
 

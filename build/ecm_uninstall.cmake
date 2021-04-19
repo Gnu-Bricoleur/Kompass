@@ -1,8 +1,8 @@
-if(NOT EXISTS "/home/sylvain/Documents/Kompass/build/install_manifest.txt")
-    message(FATAL_ERROR "Cannot find install manifest: /home/sylvain/Documents/Kompass/build/install_manifest.txt")
+if(NOT EXISTS "/home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/install_manifest.txt")
+    message(FATAL_ERROR "Cannot find install manifest: /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/install_manifest.txt")
 endif()
 
-file(READ "/home/sylvain/Documents/Kompass/build/install_manifest.txt" files)
+file(READ "/home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 foreach(file ${files})
     message(STATUS "Uninstalling $ENV{DESTDIR}${file}")
