@@ -6,6 +6,7 @@ Kirigami.ApplicationWindow {
     id: root
     title: "Kompass"
          Column{
+             Row{
                 Controls.Label {
                     text:  "x"
                     color: "red"
@@ -23,5 +24,15 @@ Kirigami.ApplicationWindow {
                     color: "black"
                     objectName: "vec" 
                }
-		}
+             }
+
+                Image {
+                    id: imagePhoto
+                    source: "qrc:/kompass_hand"
+                    transformOrigin: Item.Center
+                    rotation: 90
+                    objectName: "kompass_hand"
+                }
+         }
+
 }

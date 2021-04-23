@@ -70,6 +70,7 @@ include src/CMakeFiles/kompass.dir/progress.make
 include src/CMakeFiles/kompass.dir/flags.make
 
 src/qrc_resources.cpp: ../src/contents/ui/main.qml
+src/qrc_resources.cpp: ../src/contents/ui/kompass.png
 src/qrc_resources.cpp: src/resources.qrc.depends
 src/qrc_resources.cpp: ../src/resources.qrc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating qrc_resources.cpp"

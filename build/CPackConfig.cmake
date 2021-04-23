@@ -29,7 +29,7 @@ set(CPACK_DEFAULT_PACKAGE_DESCRIPTION_FILE "/usr/share/cmake-3.20/Templates/CPac
 set(CPACK_DEFAULT_PACKAGE_DESCRIPTION_SUMMARY "kompass built using CMake")
 set(CPACK_GENERATOR "STGZ;TGZ;TZ")
 set(CPACK_INSTALL_CMAKE_PROJECTS "/home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build;kompass;ALL;/")
-set(CPACK_INSTALL_PREFIX "/usr/local")
+set(CPACK_INSTALL_PREFIX "/usr")
 set(CPACK_MODULE_PATH "")
 set(CPACK_NSIS_DISPLAY_NAME "kompass 0.1.1")
 set(CPACK_NSIS_INSTALLER_ICON_CODE "")
