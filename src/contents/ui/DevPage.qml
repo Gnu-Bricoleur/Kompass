@@ -1,31 +1,34 @@
-import QtQuick 2.2
-import QtQuick.Layouts 1.1
-import QtQuick.Controls 2.4
+import QtQuick 2.7
+import QtQuick.Layouts 1.2
+import QtQuick.Controls 2.4 as Controls
 import org.kde.kirigami 2.4 as Kirigami
 
 Kirigami.Page
 {
     title: "Developper view"
-
+ColumnLayout {
+        width: root.width
+        height: root.height
+        spacing: 10
     Row{
             spacing: 10
-            Label {
+            Controls.Label {
                 text:  "x"
                 color: "red"
                 objectName: "x"
-            }Label {
+            }Controls.Label {
                 text:  "y"
                 color: "green"
                 objectName: "y"
-            }Label {
+            }Controls.Label {
                 text:  "z"
                 color: "blue"
                 objectName: "z"
-            }Label {
+            }Controls.Label {
                 text:  "vec"
                 color: "black"
                 objectName: "vec"
             }
         }
-}
+}}
 

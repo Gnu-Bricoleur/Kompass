@@ -15,10 +15,12 @@ Kirigami.ApplicationWindow {
             Kirigami.Action {
                 text: "Advanced view"
                 onTriggered: pageStack.push(Qt.resolvedUrl("DevPage.qml"))
+                //targetPage: "DevPage.qml"
             },
             Kirigami.Action {
                 text: "Info"
                 onTriggered: pageStack.push(Qt.resolvedUrl("InfoPage.qml"))
+                //targetPage: "gallery/InfoPage.qml"
             }
         ]
     }
