@@ -55,9 +55,9 @@ void updateCompass(){
 	QVariant vary = ay;
 	QVariant varz = az;
 
-	qmlx->setProperty("text", varx);
-	qmly->setProperty("text", vary);
-	qmlz->setProperty("text", varz);
+	//qmlx->setProperty("text", varx);
+	//qmly->setProperty("text", vary);
+	//qmlz->setProperty("text", varz);
     angle += 5;
     kompass_hand->setProperty("rotation", angle);
 }
@@ -73,7 +73,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
 
-    engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
+    engine.load(QUrl(QStringLiteral("qrc:///KompassPage.qml")));
 
     qDebug() << "Jusqu'ici tout va bien";
     
@@ -89,7 +89,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     QTimer timer;
     QObject::connect(&timer, &QTimer::timeout, updateCompass);
-    timer.start(50);
+    timer.start(100);
 
     if (engine.rootObjects().isEmpty()) {
         return -1;

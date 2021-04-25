@@ -70,6 +70,9 @@ include src/CMakeFiles/kompass.dir/progress.make
 include src/CMakeFiles/kompass.dir/flags.make
 
 src/qrc_resources.cpp: ../src/contents/ui/main.qml
+src/qrc_resources.cpp: ../src/contents/ui/DevPage.qml
+src/qrc_resources.cpp: ../src/contents/ui/KompassPage.qml
+src/qrc_resources.cpp: ../src/contents/ui/InfoPage.qml
 src/qrc_resources.cpp: ../src/contents/ui/kompass.png
 src/qrc_resources.cpp: src/resources.qrc.depends
 src/qrc_resources.cpp: ../src/resources.qrc
