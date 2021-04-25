@@ -79,49 +79,59 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlz = rootObject->findChild<QObject*>("z");
     qDebug() << "Jusqu'ici tout va bien";
 
+    struct iio_context* ctx;
+    ctx = iio_create_local_context();
+    if (!ctx) return 1;    
+    iio_device* dev = get_lis3mdl(ctx);//iio_context_get_device(ctx, "lis3mdl");
+    if(nullptr == dev)
+    {
+        return 7;
+    }
+    std::cout << "device : " << dev << endl;
+
+    // Enable all channels
+    unsigned int num_channels = iio_device_get_channels_count(dev);
+    for (unsigned int i = 0; i < num_channels; i++)
+    {
+        iio_channel* chn = iio_device_get_channel(dev, i);
+        iio_channel_enable(chn);
+
+        std::string chn_name;
+        {
+            const char *name = iio_channel_get_name(chn);
+            if (name!=NULL)
+                chn_name = name;
+            else
+                chn_name = iio_channel_get_id(chn);
+        }
+        bool is_output = iio_channel_is_output(chn);
+        std::cout << " enabled ch" << i << " : " << chn_name << (is_output ? "(output)":"(input)") << endl;
+    }
+
+    size_t samples_count=1024*num_channels;
+
+    iio_buffer *buffer;
+    buffer = iio_device_create_buffer(dev, samples_count, true);
+
+   if (!buffer)
+    {
+        std::cout << "Unable to allocate buffer"<<endl;
+        return 7;
+    }
+
+    while (true)
+    {
+        int ret = iio_buffer_refill(buffer);
+        if (ret < 0) {
+            std::cout << "Unable to refill buffer" << endl;
+            break;
+        }
+
+        //iio_buffer_foreach_sample(buffer, print_sample, NULL);
+        fflush(stdout);
+    }
 
 
-//    printf("* Acquiring IIO context the fuck\n");
-qDebug() << "Jusqu'ici tout va bien print";
-    IIO_ENSURE((ctx = iio_create_default_context()) && "No context");
-qDebug() << "Jusqu'ici tout va bien acquireing default contect";
-    IIO_ENSURE(iio_context_get_devices_count(ctx) > 0 && "No devices");
-qDebug() << "Jusqu'ici tout va bien get device count";
-
-
-
-
-
-//struct iio_context *context = iio_create_local_context();
-struct iio_device *device = get_lis3mdl(ctx); //iio_context_get_device(context, 1);
-struct iio_channel *chan = iio_device_get_channel(device, 0);
-iio_channel_enable(chan);
-if (iio_channel_is_scan_element(chan) == true) {printf("OK\n");}
-
-struct iio_buffer *buff = iio_device_create_buffer(device, 0, true);
-/*if (buff == NULL)
-{
-  printf("Error: %s\n", strerror(errno));
-  return (1);
-}*/
-qDebug() << "Jusqu'ici tout va bien get read buffer now !!t";
-/*
-p_inc = iio_buffer_step(buff);
-p_end = iio_buffer_end(buff);
-for (p_dat = (char *)iio_buffer_first(buff, rx0_i); p_dat < p_end; p_dat += p_inc) {
-			const int16_t i = ((int16_t*)p_dat)[0]; // Real (I)
-			const int16_t q = ((int16_t*)p_dat)[1]; // Imag (Q)
-			((int16_t*)p_dat)[0] = q;
-			((int16_t*)p_dat)[1] = i;
-		}
-
-*/
-while(true){
-//for (void *ptr = iio_buffer_first(buff, chan); ptr < iio_buffer_end(buff); ptr += iio_buffer_step(buff)) {
-  printf("%ld", iio_buffer_refill(buff));
-//   printf("Value:  %d\n", ((int16_t*)ptr));
-//}
-}
 
     QTimer timer;
     QObject::connect(&timer, &QTimer::timeout, updateCompass);
