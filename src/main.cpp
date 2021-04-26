@@ -79,7 +79,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlz = rootObject->findChild<QObject*>("z");
     qDebug() << "Jusqu'ici tout va bien";
 
-    struct iio_context* ctx;
+/*    struct iio_context* ctx;
     ctx = iio_create_local_context();
     if (!ctx) return 1;    
     iio_device* dev = get_lis3mdl(ctx);//iio_context_get_device(ctx, "lis3mdl");
@@ -106,36 +106,54 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
         }
         bool is_output = iio_channel_is_output(chn);
         std::cout << " enabled ch" << i << " : " << chn_name << (is_output ? "(output)":"(input)") << endl;
+double val;
+        iio_channel_attr_read_double(chn, 0, &val);
+        qDebug() << val;
+
+
     }
 
     size_t samples_count=1024*num_channels;
-
-    iio_buffer *buffer;
-    buffer = iio_device_create_buffer(dev, samples_count, true);
-
+*/
+    //iio_buffer *buffer;
+    //buffer = iio_device_create_buffer(dev, samples_count, true);
+/*
    if (!buffer)
     {
         std::cout << "Unable to allocate buffer"<<endl;
         return 7;
     }
-
-    while (true)
-    {
-        int ret = iio_buffer_refill(buffer);
-        if (ret < 0) {
-            std::cout << "Unable to refill buffer" << endl;
-            break;
-        }
+*/
+    //while (true)
+    //{
+//	double val;
+//	iio_channel_attr_read_double(chn, 0, &val);
+//	std::cout << val << endl;
+        //int ret = iio_buffer_refill(buffer);
+        //if (ret < 0) {
+        //    std::cout << "Unable to refill buffer" << endl;
+        //    break;
+        //}
 
         //iio_buffer_foreach_sample(buffer, print_sample, NULL);
-        fflush(stdout);
+        //fflush(stdout);
+    //}
+    double value;
+    struct iio_context *ctx = iio_create_default_context();
+    struct iio_device *dev = iio_context_find_device(ctx, "lis3mdl");
+    struct iio_channel *ch = iio_device_find_channel(dev, "magn_x", false);
+while(true){    
+int ret = iio_channel_attr_read_double(ch, "raw", &value);
+    if (ret < 0)
+        printf("Unable to read RSSI: %i\n", ret);
+    else
+        printf("RSSI: %f\n", value);
+
+    //iio_context_destroy(ctx);
     }
-
-
-
-    QTimer timer;
-    QObject::connect(&timer, &QTimer::timeout, updateCompass);
-    timer.start(50);
+   // QTimer timer;
+   // QObject::connect(&timer, &QTimer::timeout, updateCompass);
+   // timer.start(50);
 
     if (engine.rootObjects().isEmpty()) {
         return -1;
