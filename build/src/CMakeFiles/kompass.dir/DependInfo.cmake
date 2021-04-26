@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src/kompass_autogen/mocs_compilation.cpp" "src/CMakeFiles/kompass.dir/kompass_autogen/mocs_compilation.cpp.o" "gcc" "src/CMakeFiles/kompass.dir/kompass_autogen/mocs_compilation.cpp.o.d"
-  "/home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/src/main.cpp" "src/CMakeFiles/kompass.dir/main.cpp.o" "gcc" "src/CMakeFiles/kompass.dir/main.cpp.o.d"
-  "/home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src/qrc_resources.cpp" "src/CMakeFiles/kompass.dir/qrc_resources.cpp.o" "gcc" "src/CMakeFiles/kompass.dir/qrc_resources.cpp.o.d"
+  "/home/sylvain/Documents/Kompass/build/src/kompass_autogen/mocs_compilation.cpp" "src/CMakeFiles/kompass.dir/kompass_autogen/mocs_compilation.cpp.o" "gcc" "src/CMakeFiles/kompass.dir/kompass_autogen/mocs_compilation.cpp.o.d"
+  "/home/sylvain/Documents/Kompass/src/main.cpp" "src/CMakeFiles/kompass.dir/main.cpp.o" "gcc" "src/CMakeFiles/kompass.dir/main.cpp.o.d"
+  "/home/sylvain/Documents/Kompass/build/src/qrc_resources.cpp" "src/CMakeFiles/kompass.dir/qrc_resources.cpp.o" "gcc" "src/CMakeFiles/kompass.dir/qrc_resources.cpp.o.d"
   )
 
 # Targets to which this target links.

@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass
+CMAKE_SOURCE_DIR = /home/sylvain/Documents/Kompass
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build
+CMAKE_BINARY_DIR = /home/sylvain/Documents/Kompass/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -99,14 +99,14 @@ src/clean: src/CMakeFiles/kompass_autogen.dir/clean
 CMakeFiles/fetch-translations.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fetch-translations.dir/build.make CMakeFiles/fetch-translations.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fetch-translations.dir/build.make CMakeFiles/fetch-translations.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/CMakeFiles --progress-num=1,2 "Built target fetch-translations"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sylvain/Documents/Kompass/build/CMakeFiles --progress-num=1,2 "Built target fetch-translations"
 .PHONY : CMakeFiles/fetch-translations.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/fetch-translations.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sylvain/Documents/Kompass/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/fetch-translations.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sylvain/Documents/Kompass/build/CMakeFiles 0
 .PHONY : CMakeFiles/fetch-translations.dir/rule
 
 # Convenience name for target.
@@ -125,14 +125,14 @@ CMakeFiles/fetch-translations.dir/clean:
 CMakeFiles/uninstall.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/CMakeFiles --progress-num= "Built target uninstall"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sylvain/Documents/Kompass/build/CMakeFiles --progress-num= "Built target uninstall"
 .PHONY : CMakeFiles/uninstall.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/uninstall.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sylvain/Documents/Kompass/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/uninstall.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sylvain/Documents/Kompass/build/CMakeFiles 0
 .PHONY : CMakeFiles/uninstall.dir/rule
 
 # Convenience name for target.
@@ -151,14 +151,14 @@ CMakeFiles/uninstall.dir/clean:
 src/CMakeFiles/kompass.dir/all: src/CMakeFiles/kompass_autogen.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/kompass.dir/build.make src/CMakeFiles/kompass.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/kompass.dir/build.make src/CMakeFiles/kompass.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/CMakeFiles --progress-num=3,4,5,6,7 "Built target kompass"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sylvain/Documents/Kompass/build/CMakeFiles --progress-num=3,4,5,6,7 "Built target kompass"
 .PHONY : src/CMakeFiles/kompass.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/kompass.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sylvain/Documents/Kompass/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/kompass.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sylvain/Documents/Kompass/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/kompass.dir/rule
 
 # Convenience name for target.
@@ -177,14 +177,14 @@ src/CMakeFiles/kompass.dir/clean:
 src/CMakeFiles/kompass_autogen.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/kompass_autogen.dir/build.make src/CMakeFiles/kompass_autogen.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/kompass_autogen.dir/build.make src/CMakeFiles/kompass_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/CMakeFiles --progress-num=8 "Built target kompass_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sylvain/Documents/Kompass/build/CMakeFiles --progress-num=8 "Built target kompass_autogen"
 .PHONY : src/CMakeFiles/kompass_autogen.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/kompass_autogen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sylvain/Documents/Kompass/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/kompass_autogen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sylvain/Documents/Kompass/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/kompass_autogen.dir/rule
 
 # Convenience name for target.

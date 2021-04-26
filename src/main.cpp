@@ -9,26 +9,13 @@
 #include <string>
 #include <stdlib.h>
 #include <stdio.h>
-//#include <iio.h>
-/*
-static struct iio_context *ctx   = NULL;
+#include <iio.h>
+#include <math.h>
 
-#define IIO_ENSURE(expr) { \
-	if (!(expr)) { \
-		(void) fprintf(stderr, "assertion failed (%s:%d)\n", __FILE__, __LINE__); \
-		(void) abort(); \
-	} \
-}
-*/
+struct iio_channel *chx;
+struct iio_channel *chy;
+struct iio_channel *chz;
 
-/* returns LIS3MDL phy device */
-/*
-static struct iio_device* get_lis3mdl(struct iio_context *ctx)
-{
-	struct iio_device *dev =  iio_context_find_device(ctx, "lis3mdl");
-	IIO_ENSURE(dev && "No lis3mdl found");
-	return dev;
-}*/
 QObject *qmlx;
 QObject *qmly;
 QObject *qmlz;
@@ -36,30 +23,27 @@ QObject *qmlvec;
 QObject *kompass_hand;
 
 void updateCompass(){
-	FILE *xraw, *yraw, *zraw;
-	int n, ax, ay, az;
-    static int angle = 0;
-	/*xraw = fopen("/sys/bus/iio/devices/iio\:device2/in_magn_x_raw", "r");
-	yraw = fopen("/sys/bus/iio/devices/iio\:device2/in_magn_y_raw", "r");
-	zraw = fopen("/sys/bus/iio/devices/iio\:device2/in_magn_z_raw", "r");
-	fscanf(xraw, "%d", &ax);
-	fscanf(yraw, "%d", &ay);
-	fscanf(zraw, "%d", &az);
-	fclose(xraw);
-	fclose(yraw);
-	fclose(zraw);*/
-	ax = 20;
-	ay = 10;
-	az = 40;
+	double ax, ay, az;
+	int angle = 0;
+	iio_channel_attr_read_double(chx, "raw", &ax);
+	iio_channel_attr_read_double(chy, "raw", &ay);
+	iio_channel_attr_read_double(chz, "raw", &az);
 	QVariant varx = ax;
 	QVariant vary = ay;
 	QVariant varz = az;
-
+	qDebug() << ax << ", " << ay << ", " << az;
 	//qmlx->setProperty("text", varx);
 	//qmly->setProperty("text", vary);
 	//qmlz->setProperty("text", varz);
-    angle += 5;
-    kompass_hand->setProperty("rotation", angle);
+    	angle = int(atan2(int(ax), int(ay))*(180/3.14));
+	while(angle>360){
+		angle -= 360;
+	}
+	while (angle < 0){
+		angle += 360;
+	}
+	qDebug() << angle;
+	kompass_hand->setProperty("rotation", angle);
 }
 
 
@@ -85,11 +69,16 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     kompass_hand = rootObject->findChild<QObject*>("kompass_hand");
     qDebug() << "Jusqu'ici tout va bien";
 
-
+    struct iio_context *ctx = iio_create_default_context();
+    struct iio_device *dev = iio_context_find_device(ctx, "lis3mdl");
+    chx = iio_device_find_channel(dev, "magn_x", false);
+    chy = iio_device_find_channel(dev, "magn_y", false);
+    chz = iio_device_find_channel(dev, "magn_z", false);
+    iio_device_buffer_attr_write_double(dev, "sampling_frequency", 80);
 
     QTimer timer;
     QObject::connect(&timer, &QTimer::timeout, updateCompass);
-    timer.start(100);
+    timer.start(50);
 
     if (engine.rootObjects().isEmpty()) {
         return -1;

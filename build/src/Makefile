@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass
+CMAKE_SOURCE_DIR = /home/sylvain/Documents/Kompass
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build
+CMAKE_BINARY_DIR = /home/sylvain/Documents/Kompass/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -112,7 +112,7 @@ test/fast: test
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/CPackSourceConfig.cmake
+	cd /home/sylvain/Documents/Kompass/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/sylvain/Documents/Kompass/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -153,7 +153,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/sylvain/Documents/Kompass/build && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -162,14 +162,14 @@ package/fast: package
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/CMakeFiles /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src//CMakeFiles/progress.marks
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/CMakeFiles 0
+	cd /home/sylvain/Documents/Kompass/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/sylvain/Documents/Kompass/build/CMakeFiles /home/sylvain/Documents/Kompass/build/src//CMakeFiles/progress.marks
+	cd /home/sylvain/Documents/Kompass/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sylvain/Documents/Kompass/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
+	cd /home/sylvain/Documents/Kompass/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -178,22 +178,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/sylvain/Documents/Kompass/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/sylvain/Documents/Kompass/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/sylvain/Documents/Kompass/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/kompass.dir/rule:
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/kompass.dir/rule
+	cd /home/sylvain/Documents/Kompass/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/kompass.dir/rule
 .PHONY : src/CMakeFiles/kompass.dir/rule
 
 # Convenience name for target.
@@ -202,12 +202,12 @@ kompass: src/CMakeFiles/kompass.dir/rule
 
 # fast build rule for target.
 kompass/fast:
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kompass.dir/build.make src/CMakeFiles/kompass.dir/build
+	cd /home/sylvain/Documents/Kompass/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kompass.dir/build.make src/CMakeFiles/kompass.dir/build
 .PHONY : kompass/fast
 
 # Convenience name for target.
 src/CMakeFiles/kompass_autogen.dir/rule:
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/kompass_autogen.dir/rule
+	cd /home/sylvain/Documents/Kompass/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/kompass_autogen.dir/rule
 .PHONY : src/CMakeFiles/kompass_autogen.dir/rule
 
 # Convenience name for target.
@@ -216,7 +216,7 @@ kompass_autogen: src/CMakeFiles/kompass_autogen.dir/rule
 
 # fast build rule for target.
 kompass_autogen/fast:
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kompass_autogen.dir/build.make src/CMakeFiles/kompass_autogen.dir/build
+	cd /home/sylvain/Documents/Kompass/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kompass_autogen.dir/build.make src/CMakeFiles/kompass_autogen.dir/build
 .PHONY : kompass_autogen/fast
 
 kompass_autogen/mocs_compilation.o: kompass_autogen/mocs_compilation.cpp.o
@@ -224,7 +224,7 @@ kompass_autogen/mocs_compilation.o: kompass_autogen/mocs_compilation.cpp.o
 
 # target to build an object file
 kompass_autogen/mocs_compilation.cpp.o:
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kompass.dir/build.make src/CMakeFiles/kompass.dir/kompass_autogen/mocs_compilation.cpp.o
+	cd /home/sylvain/Documents/Kompass/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kompass.dir/build.make src/CMakeFiles/kompass.dir/kompass_autogen/mocs_compilation.cpp.o
 .PHONY : kompass_autogen/mocs_compilation.cpp.o
 
 kompass_autogen/mocs_compilation.i: kompass_autogen/mocs_compilation.cpp.i
@@ -232,7 +232,7 @@ kompass_autogen/mocs_compilation.i: kompass_autogen/mocs_compilation.cpp.i
 
 # target to preprocess a source file
 kompass_autogen/mocs_compilation.cpp.i:
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kompass.dir/build.make src/CMakeFiles/kompass.dir/kompass_autogen/mocs_compilation.cpp.i
+	cd /home/sylvain/Documents/Kompass/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kompass.dir/build.make src/CMakeFiles/kompass.dir/kompass_autogen/mocs_compilation.cpp.i
 .PHONY : kompass_autogen/mocs_compilation.cpp.i
 
 kompass_autogen/mocs_compilation.s: kompass_autogen/mocs_compilation.cpp.s
@@ -240,7 +240,7 @@ kompass_autogen/mocs_compilation.s: kompass_autogen/mocs_compilation.cpp.s
 
 # target to generate assembly for a file
 kompass_autogen/mocs_compilation.cpp.s:
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kompass.dir/build.make src/CMakeFiles/kompass.dir/kompass_autogen/mocs_compilation.cpp.s
+	cd /home/sylvain/Documents/Kompass/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kompass.dir/build.make src/CMakeFiles/kompass.dir/kompass_autogen/mocs_compilation.cpp.s
 .PHONY : kompass_autogen/mocs_compilation.cpp.s
 
 main.o: main.cpp.o
@@ -248,7 +248,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kompass.dir/build.make src/CMakeFiles/kompass.dir/main.cpp.o
+	cd /home/sylvain/Documents/Kompass/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kompass.dir/build.make src/CMakeFiles/kompass.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -256,7 +256,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kompass.dir/build.make src/CMakeFiles/kompass.dir/main.cpp.i
+	cd /home/sylvain/Documents/Kompass/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kompass.dir/build.make src/CMakeFiles/kompass.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -264,7 +264,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kompass.dir/build.make src/CMakeFiles/kompass.dir/main.cpp.s
+	cd /home/sylvain/Documents/Kompass/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kompass.dir/build.make src/CMakeFiles/kompass.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 qrc_resources.o: qrc_resources.cpp.o
@@ -272,7 +272,7 @@ qrc_resources.o: qrc_resources.cpp.o
 
 # target to build an object file
 qrc_resources.cpp.o:
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kompass.dir/build.make src/CMakeFiles/kompass.dir/qrc_resources.cpp.o
+	cd /home/sylvain/Documents/Kompass/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kompass.dir/build.make src/CMakeFiles/kompass.dir/qrc_resources.cpp.o
 .PHONY : qrc_resources.cpp.o
 
 qrc_resources.i: qrc_resources.cpp.i
@@ -280,7 +280,7 @@ qrc_resources.i: qrc_resources.cpp.i
 
 # target to preprocess a source file
 qrc_resources.cpp.i:
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kompass.dir/build.make src/CMakeFiles/kompass.dir/qrc_resources.cpp.i
+	cd /home/sylvain/Documents/Kompass/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kompass.dir/build.make src/CMakeFiles/kompass.dir/qrc_resources.cpp.i
 .PHONY : qrc_resources.cpp.i
 
 qrc_resources.s: qrc_resources.cpp.s
@@ -288,7 +288,7 @@ qrc_resources.s: qrc_resources.cpp.s
 
 # target to generate assembly for a file
 qrc_resources.cpp.s:
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kompass.dir/build.make src/CMakeFiles/kompass.dir/qrc_resources.cpp.s
+	cd /home/sylvain/Documents/Kompass/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/kompass.dir/build.make src/CMakeFiles/kompass.dir/qrc_resources.cpp.s
 .PHONY : qrc_resources.cpp.s
 
 # Help Target
@@ -328,6 +328,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/sylvain/Documents/Kompass/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

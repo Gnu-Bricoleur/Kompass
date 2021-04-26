@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass
+CMAKE_SOURCE_DIR = /home/sylvain/Documents/Kompass
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build
+CMAKE_BINARY_DIR = /home/sylvain/Documents/Kompass/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/kompass.dir/depend.make
@@ -76,50 +76,50 @@ src/qrc_resources.cpp: ../src/contents/ui/InfoPage.qml
 src/qrc_resources.cpp: ../src/contents/ui/kompass.png
 src/qrc_resources.cpp: src/resources.qrc.depends
 src/qrc_resources.cpp: ../src/resources.qrc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating qrc_resources.cpp"
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src && /usr/bin/rcc --name resources --output /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src/qrc_resources.cpp /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/src/resources.qrc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sylvain/Documents/Kompass/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating qrc_resources.cpp"
+	cd /home/sylvain/Documents/Kompass/build/src && /usr/bin/rcc --name resources --output /home/sylvain/Documents/Kompass/build/src/qrc_resources.cpp /home/sylvain/Documents/Kompass/src/resources.qrc
 
 src/CMakeFiles/kompass.dir/kompass_autogen/mocs_compilation.cpp.o: src/CMakeFiles/kompass.dir/flags.make
 src/CMakeFiles/kompass.dir/kompass_autogen/mocs_compilation.cpp.o: src/kompass_autogen/mocs_compilation.cpp
 src/CMakeFiles/kompass.dir/kompass_autogen/mocs_compilation.cpp.o: src/CMakeFiles/kompass.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/kompass.dir/kompass_autogen/mocs_compilation.cpp.o"
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/kompass.dir/kompass_autogen/mocs_compilation.cpp.o -MF CMakeFiles/kompass.dir/kompass_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/kompass.dir/kompass_autogen/mocs_compilation.cpp.o -c /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src/kompass_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sylvain/Documents/Kompass/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/kompass.dir/kompass_autogen/mocs_compilation.cpp.o"
+	cd /home/sylvain/Documents/Kompass/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/kompass.dir/kompass_autogen/mocs_compilation.cpp.o -MF CMakeFiles/kompass.dir/kompass_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/kompass.dir/kompass_autogen/mocs_compilation.cpp.o -c /home/sylvain/Documents/Kompass/build/src/kompass_autogen/mocs_compilation.cpp
 
 src/CMakeFiles/kompass.dir/kompass_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kompass.dir/kompass_autogen/mocs_compilation.cpp.i"
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src/kompass_autogen/mocs_compilation.cpp > CMakeFiles/kompass.dir/kompass_autogen/mocs_compilation.cpp.i
+	cd /home/sylvain/Documents/Kompass/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sylvain/Documents/Kompass/build/src/kompass_autogen/mocs_compilation.cpp > CMakeFiles/kompass.dir/kompass_autogen/mocs_compilation.cpp.i
 
 src/CMakeFiles/kompass.dir/kompass_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kompass.dir/kompass_autogen/mocs_compilation.cpp.s"
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src/kompass_autogen/mocs_compilation.cpp -o CMakeFiles/kompass.dir/kompass_autogen/mocs_compilation.cpp.s
+	cd /home/sylvain/Documents/Kompass/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sylvain/Documents/Kompass/build/src/kompass_autogen/mocs_compilation.cpp -o CMakeFiles/kompass.dir/kompass_autogen/mocs_compilation.cpp.s
 
 src/CMakeFiles/kompass.dir/main.cpp.o: src/CMakeFiles/kompass.dir/flags.make
 src/CMakeFiles/kompass.dir/main.cpp.o: ../src/main.cpp
 src/CMakeFiles/kompass.dir/main.cpp.o: src/CMakeFiles/kompass.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/kompass.dir/main.cpp.o"
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/kompass.dir/main.cpp.o -MF CMakeFiles/kompass.dir/main.cpp.o.d -o CMakeFiles/kompass.dir/main.cpp.o -c /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sylvain/Documents/Kompass/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/kompass.dir/main.cpp.o"
+	cd /home/sylvain/Documents/Kompass/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/kompass.dir/main.cpp.o -MF CMakeFiles/kompass.dir/main.cpp.o.d -o CMakeFiles/kompass.dir/main.cpp.o -c /home/sylvain/Documents/Kompass/src/main.cpp
 
 src/CMakeFiles/kompass.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kompass.dir/main.cpp.i"
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/src/main.cpp > CMakeFiles/kompass.dir/main.cpp.i
+	cd /home/sylvain/Documents/Kompass/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sylvain/Documents/Kompass/src/main.cpp > CMakeFiles/kompass.dir/main.cpp.i
 
 src/CMakeFiles/kompass.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kompass.dir/main.cpp.s"
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/src/main.cpp -o CMakeFiles/kompass.dir/main.cpp.s
+	cd /home/sylvain/Documents/Kompass/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sylvain/Documents/Kompass/src/main.cpp -o CMakeFiles/kompass.dir/main.cpp.s
 
 src/CMakeFiles/kompass.dir/qrc_resources.cpp.o: src/CMakeFiles/kompass.dir/flags.make
 src/CMakeFiles/kompass.dir/qrc_resources.cpp.o: src/qrc_resources.cpp
 src/CMakeFiles/kompass.dir/qrc_resources.cpp.o: src/CMakeFiles/kompass.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/kompass.dir/qrc_resources.cpp.o"
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/kompass.dir/qrc_resources.cpp.o -MF CMakeFiles/kompass.dir/qrc_resources.cpp.o.d -o CMakeFiles/kompass.dir/qrc_resources.cpp.o -c /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src/qrc_resources.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sylvain/Documents/Kompass/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/kompass.dir/qrc_resources.cpp.o"
+	cd /home/sylvain/Documents/Kompass/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/kompass.dir/qrc_resources.cpp.o -MF CMakeFiles/kompass.dir/qrc_resources.cpp.o.d -o CMakeFiles/kompass.dir/qrc_resources.cpp.o -c /home/sylvain/Documents/Kompass/build/src/qrc_resources.cpp
 
 src/CMakeFiles/kompass.dir/qrc_resources.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kompass.dir/qrc_resources.cpp.i"
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src/qrc_resources.cpp > CMakeFiles/kompass.dir/qrc_resources.cpp.i
+	cd /home/sylvain/Documents/Kompass/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sylvain/Documents/Kompass/build/src/qrc_resources.cpp > CMakeFiles/kompass.dir/qrc_resources.cpp.i
 
 src/CMakeFiles/kompass.dir/qrc_resources.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kompass.dir/qrc_resources.cpp.s"
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src/qrc_resources.cpp -o CMakeFiles/kompass.dir/qrc_resources.cpp.s
+	cd /home/sylvain/Documents/Kompass/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sylvain/Documents/Kompass/build/src/qrc_resources.cpp -o CMakeFiles/kompass.dir/qrc_resources.cpp.s
 
 # Object files for target kompass
 kompass_OBJECTS = \
@@ -135,18 +135,18 @@ src/kompass: src/CMakeFiles/kompass.dir/main.cpp.o
 src/kompass: src/CMakeFiles/kompass.dir/qrc_resources.cpp.o
 src/kompass: src/CMakeFiles/kompass.dir/build.make
 src/kompass: src/CMakeFiles/kompass.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable kompass"
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/kompass.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sylvain/Documents/Kompass/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable kompass"
+	cd /home/sylvain/Documents/Kompass/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/kompass.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/kompass.dir/build: src/kompass
 .PHONY : src/CMakeFiles/kompass.dir/build
 
 src/CMakeFiles/kompass.dir/clean:
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src && $(CMAKE_COMMAND) -P CMakeFiles/kompass.dir/cmake_clean.cmake
+	cd /home/sylvain/Documents/Kompass/build/src && $(CMAKE_COMMAND) -P CMakeFiles/kompass.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/kompass.dir/clean
 
 src/CMakeFiles/kompass.dir/depend: src/qrc_resources.cpp
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/src /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src/CMakeFiles/kompass.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/sylvain/Documents/Kompass/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sylvain/Documents/Kompass /home/sylvain/Documents/Kompass/src /home/sylvain/Documents/Kompass/build /home/sylvain/Documents/Kompass/build/src /home/sylvain/Documents/Kompass/build/src/CMakeFiles/kompass.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/kompass.dir/depend
 

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass
+CMAKE_SOURCE_DIR = /home/sylvain/Documents/Kompass
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build
+CMAKE_BINARY_DIR = /home/sylvain/Documents/Kompass/build
 
 # Utility rule file for fetch-translations.
 
@@ -67,14 +67,14 @@ include CMakeFiles/fetch-translations.dir/compiler_depend.make
 include CMakeFiles/fetch-translations.dir/progress.make
 
 CMakeFiles/fetch-translations: releaseme
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Downloading translations for kompass branch trunk..."
-	git -C /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/releaseme pull
-	cmake -E remove_directory /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/po
-	cmake -E remove_directory /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/poqm
-	ruby /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/releaseme/fetchpo.rb --origin trunk --project kompass --output-dir /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/po --output-poqm-dir /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/poqm /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sylvain/Documents/Kompass/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Downloading translations for kompass branch trunk..."
+	git -C /home/sylvain/Documents/Kompass/build/releaseme pull
+	cmake -E remove_directory /home/sylvain/Documents/Kompass/build/po
+	cmake -E remove_directory /home/sylvain/Documents/Kompass/build/poqm
+	ruby /home/sylvain/Documents/Kompass/build/releaseme/fetchpo.rb --origin trunk --project kompass --output-dir /home/sylvain/Documents/Kompass/build/po --output-poqm-dir /home/sylvain/Documents/Kompass/build/poqm /home/sylvain/Documents/Kompass
 
 releaseme:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Fetching releaseme scripts to download translations..."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sylvain/Documents/Kompass/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Fetching releaseme scripts to download translations..."
 	git clone --depth 1 https://invent.kde.org/sdk/releaseme.git
 
 fetch-translations: CMakeFiles/fetch-translations
@@ -91,6 +91,6 @@ CMakeFiles/fetch-translations.dir/clean:
 .PHONY : CMakeFiles/fetch-translations.dir/clean
 
 CMakeFiles/fetch-translations.dir/depend:
-	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/CMakeFiles/fetch-translations.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/sylvain/Documents/Kompass/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sylvain/Documents/Kompass /home/sylvain/Documents/Kompass /home/sylvain/Documents/Kompass/build /home/sylvain/Documents/Kompass/build /home/sylvain/Documents/Kompass/build/CMakeFiles/fetch-translations.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/fetch-translations.dir/depend
 
