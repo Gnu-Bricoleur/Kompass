@@ -28,6 +28,8 @@ void updateCompass(){
 	iio_channel_attr_read_double(chx, "raw", &ax);
 	iio_channel_attr_read_double(chy, "raw", &ay);
 	iio_channel_attr_read_double(chz, "raw", &az);
+	ax = (ax+1300)/(-4300+1300)*100;
+	ay = (ay-200)/(2800-200)*100;
 	QVariant varx = ax;
 	QVariant vary = ay;
 	QVariant varz = az;
@@ -71,11 +73,15 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     struct iio_context *ctx = iio_create_default_context();
     struct iio_device *dev = iio_context_find_device(ctx, "lis3mdl");
+
     chx = iio_device_find_channel(dev, "magn_x", false);
     chy = iio_device_find_channel(dev, "magn_y", false);
     chz = iio_device_find_channel(dev, "magn_z", false);
-    iio_device_buffer_attr_write_double(dev, "sampling_frequency", 80);
 
+    //struct iio_context *confctx = iio_create_context_from_uri("ip:localhost");
+    //struct iio_device *confdev = iio_context_find_device(confctx, "lis3mdl");
+    //int reto = iio_device_attr_write_double(confdev, "sampling_frequency", 1);
+    //qDebug() << reto << "succes ?";
     QTimer timer;
     QObject::connect(&timer, &QTimer::timeout, updateCompass);
     timer.start(50);
