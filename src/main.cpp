@@ -21,6 +21,7 @@ QObject *qmly;
 QObject *qmlz;
 QObject *qmlvec;
 QObject *kompass_hand;
+double minx, maxx, miny, maxy;
 
 void updateCompass(){
 	double ax, ay, az;
@@ -28,8 +29,12 @@ void updateCompass(){
 	iio_channel_attr_read_double(chx, "raw", &ax);
 	iio_channel_attr_read_double(chy, "raw", &ay);
 	iio_channel_attr_read_double(chz, "raw", &az);
-	ax = (ax+1300)/(-4300+1300)*100;
-	ay = (ay-200)/(2800-200)*100;
+    if (ax<minx){minx = ax;}
+    if (ax>maxx){maxx = ax;}
+    if (ay<miny){miny = ay;}
+    if (ay>maxy){maxy = ay;}
+	ax = (ax-minx)/(maxx-minx)*100;
+	ay = (ay-miny)/(maxy-miny)*100;
 	QVariant varx = ax;
 	QVariant vary = ay;
 	QVariant varz = az;
@@ -37,7 +42,7 @@ void updateCompass(){
 	//qmlx->setProperty("text", varx);
 	//qmly->setProperty("text", vary);
 	//qmlz->setProperty("text", varz);
-    	angle = int(atan2(int(ax), int(ay))*(180/3.14));
+    angle = int(atan2(int(ax), int(ay))*(180/3.14));
 	while(angle>360){
 		angle -= 360;
 	}
@@ -78,6 +83,10 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     chy = iio_device_find_channel(dev, "magn_y", false);
     chz = iio_device_find_channel(dev, "magn_z", false);
 
+    iio_channel_attr_read_double(chx, "raw", &minx);
+	iio_channel_attr_read_double(chy, "raw", &miny);
+    iio_channel_attr_read_double(chx, "raw", &maxx);
+	iio_channel_attr_read_double(chy, "raw", &maxy);
     //struct iio_context *confctx = iio_create_context_from_uri("ip:localhost");
     //struct iio_device *confdev = iio_context_find_device(confctx, "lis3mdl");
     //int reto = iio_device_attr_write_double(confdev, "sampling_frequency", 1);
