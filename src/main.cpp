@@ -39,9 +39,9 @@ void updateCompass(){
 	QVariant vary = ay;
 	QVariant varz = az;
 	qDebug() << ax << ", " << ay << ", " << az;
-	//qmlx->setProperty("text", varx);
-	//qmly->setProperty("text", vary);
-	//qmlz->setProperty("text", varz);
+	qmlx->setProperty("text", varx);
+	qmly->setProperty("text", vary);
+	qmlz->setProperty("text", varz);
     angle = int(atan2(int(ax), int(ay))*(180/3.14));
 	while(angle>360){
 		angle -= 360;
