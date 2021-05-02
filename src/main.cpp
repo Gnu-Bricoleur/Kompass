@@ -29,20 +29,24 @@ void updateCompass(){
 	iio_channel_attr_read_double(chx, "raw", &ax);
 	iio_channel_attr_read_double(chy, "raw", &ay);
 	iio_channel_attr_read_double(chz, "raw", &az);
-    if (ax<minx){minx = ax;}
-    if (ax>maxx){maxx = ax;}
-    if (ay<miny){miny = ay;}
-    if (ay>maxy){maxy = ay;}
-	ax = (ax-minx)/(maxx-minx)*100;
-	ay = (ay-miny)/(maxy-miny)*100;
+	qDebug() << ax << ", " << ay << ", " << az;
+
+	if (ax<minx){minx = ax;}
+    	if (ax>maxx){maxx = ax;}
+    	if (ay<miny){miny = ay;}
+    	if (ay>maxy){maxy = ay;}
+	
+	ax = (ax-minx)/(maxx-minx)*360;
+	ay = (ay-miny)/(maxy-miny)*360;
+	qDebug() << ax << ", " << ay << ", " << az;
+
 	QVariant varx = ax;
 	QVariant vary = ay;
 	QVariant varz = az;
-	qDebug() << ax << ", " << ay << ", " << az;
-	qmlx->setProperty("text", varx);
-	qmly->setProperty("text", vary);
-	qmlz->setProperty("text", varz);
-    angle = int(atan2(int(ax), int(ay))*(180/3.14));
+	//qmlx->setProperty("text", varx);
+	//qmly->setProperty("text", vary);
+	//qmlz->setProperty("text", varz);
+    	angle = 360 - (int(atan2(int(ay), int(ax))*(57.2957))*4);
 	while(angle>360){
 		angle -= 360;
 	}
