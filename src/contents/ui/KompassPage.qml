@@ -32,10 +32,10 @@ Kirigami.Page {
                 transformOrigin: Item.Center
                 rotation: applicationData.angle
                 objectName: "kompass_hand"
-                Connections {
-                target: applicationData
-                onValueChanged: console.log("The value has changed to: " + angle)
-            }
+                //Connections {
+                //    target: applicationData
+                //    onValueChanged: console.log("The value has changed to: " + angle)
+                //}
             }
         }
     }

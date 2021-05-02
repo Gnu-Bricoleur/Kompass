@@ -29,25 +29,37 @@ int angle;
 
 class ApplicationData : public QObject
 {
-   Q_OBJECT
-   Q_PROPERTY(int angle READ angle WRITE setAngle NOTIFY angleChanged)
- public:
-     void setAngle(const int &a) {
-        if (a != m_angle) {
-            m_angle = a;
-            emit angleChanged();
+    Q_OBJECT
+    Q_PROPERTY(int angle READ angle WRITE setAngle NOTIFY angleChanged)
+    Q_PROPERTY(int xraw READ xraw WRITE setXraw NOTIFY angleChanged)
+    Q_PROPERTY(int yraw READ yraw WRITE setYraw NOTIFY angleChanged)
+    Q_PROPERTY(int zraw READ zraw WRITE setZraw NOTIFY angleChanged)
+    public:
+        void setXraw(const int &a) {m_xraw = a;}
+        int xraw() const {return m_xraw;}
+        void setYraw(const int &a) {m_yraw = a;}
+        int yraw() const {return m_yraw;}
+        void setZraw(const int &a) {m_zraw = a;}
+        int zraw() const {return m_zraw;}
+
+        void setAngle(const int &a) {
+            if (a != m_angle) {
+                m_angle = a;
+                emit angleChanged();
+            }
         }
-    }
-    int angle() const {
-        return m_angle;
-    }
-signals:
-    void angleChanged();
+        int angle() const {
+            return m_angle;
+        }
+    signals:
+        void angleChanged();
     private:
-    int m_angle;
+        int m_angle;
+        int m_xraw, m_yraw, m_zraw;
 };
 
 ApplicationData data;
+
 void updateCompass(){
 	double ax, ay, az;
 
@@ -76,6 +88,9 @@ void updateCompass(){
 // 	}
     angle += 5;
     data.setAngle(angle);
+    data.setXraw(angle);
+    data.setYraw(angle);
+    data.setZraw(angle);
 	//kompass_hand->setProperty("rotation", angle);
 }
 
