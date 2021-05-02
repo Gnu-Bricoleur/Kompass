@@ -12,17 +12,17 @@ src/CMakeFiles/kompass.dir/main.cpp.o: ../src/main.cpp \
   /usr/include/qt/QtGui/qtguiglobal.h \
   /usr/include/qt/QtCore/qglobal.h \
   /usr/include/c++/10.2.0/type_traits \
-  /usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/c++config.h \
-  /usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/os_defines.h \
+  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/c++config.h \
+  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/os_defines.h \
   /usr/include/features.h \
   /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h \
   /usr/include/bits/long-double.h \
   /usr/include/gnu/stubs.h \
-  /usr/include/gnu/stubs-lp64.h \
-  /usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/cpu_defines.h \
+  /usr/include/gnu/stubs-64.h \
+  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/cpu_defines.h \
   /usr/include/c++/10.2.0/cstddef \
-  /usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/include/stddef.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include/stddef.h \
   /usr/include/c++/10.2.0/utility \
   /usr/include/c++/10.2.0/bits/stl_relops.h \
   /usr/include/c++/10.2.0/bits/stl_pair.h \
@@ -112,7 +112,7 @@ src/CMakeFiles/kompass.dir/main.cpp.o: ../src/main.cpp \
   /usr/include/qt/QtCore/qgenericatomic.h \
   /usr/include/c++/10.2.0/atomic \
   /usr/include/c++/10.2.0/bits/atomic_base.h \
-  /usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/include/stdint.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include/stdint.h \
   /usr/include/stdint.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/stdint-uintn.h \
@@ -132,7 +132,7 @@ src/CMakeFiles/kompass.dir/main.cpp.o: ../src/main.cpp \
   /usr/include/string.h \
   /usr/include/strings.h \
   /usr/include/c++/10.2.0/stdlib.h \
-  /usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/include/stdarg.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include/stdarg.h \
   /usr/include/c++/10.2.0/string \
   /usr/include/c++/10.2.0/bits/stringfwd.h \
   /usr/include/c++/10.2.0/bits/memoryfwd.h \
@@ -147,10 +147,10 @@ src/CMakeFiles/kompass.dir/main.cpp.o: ../src/main.cpp \
   /usr/include/bits/types/FILE.h \
   /usr/include/c++/10.2.0/cstdint \
   /usr/include/c++/10.2.0/bits/allocator.h \
-  /usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/c++allocator.h \
+  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/c++allocator.h \
   /usr/include/c++/10.2.0/ext/new_allocator.h \
   /usr/include/c++/10.2.0/bits/localefwd.h \
-  /usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/c++locale.h \
+  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/c++locale.h \
   /usr/include/c++/10.2.0/clocale \
   /usr/include/locale.h \
   /usr/include/bits/locale.h \
@@ -168,8 +168,8 @@ src/CMakeFiles/kompass.dir/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/10.2.0/bits/int_limits.h \
   /usr/include/c++/10.2.0/bits/basic_string.h \
   /usr/include/c++/10.2.0/ext/atomicity.h \
-  /usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/gthr.h \
-  /usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/gthr-default.h \
+  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/gthr.h \
+  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/gthr-default.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/bits/sched.h \
@@ -181,7 +181,8 @@ src/CMakeFiles/kompass.dir/main.cpp.o: ../src/main.cpp \
   /usr/include/bits/types/struct_tm.h \
   /usr/include/bits/types/struct_itimerspec.h \
   /usr/include/bits/setjmp.h \
-  /usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/atomic_word.h \
+  /usr/include/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/atomic_word.h \
   /usr/include/c++/10.2.0/ext/alloc_traits.h \
   /usr/include/c++/10.2.0/bits/alloc_traits.h \
   /usr/include/c++/10.2.0/ext/string_conversions.h \
@@ -211,7 +212,7 @@ src/CMakeFiles/kompass.dir/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/10.2.0/bits/locale_classes.h \
   /usr/include/c++/10.2.0/bits/locale_classes.tcc \
   /usr/include/c++/10.2.0/system_error \
-  /usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/error_constants.h \
+  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/error_constants.h \
   /usr/include/c++/10.2.0/stdexcept \
   /usr/include/c++/10.2.0/bits/streambuf.tcc \
   /usr/include/qt/QtCore/qstringliteral.h \
@@ -246,8 +247,8 @@ src/CMakeFiles/kompass.dir/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/10.2.0/bits/allocated_ptr.h \
   /usr/include/c++/10.2.0/ext/aligned_buffer.h \
   /usr/include/c++/10.2.0/bits/list.tcc \
-  /usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/include-fixed/limits.h \
-  /usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/include-fixed/syslimits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed/limits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed/syslimits.h \
   /usr/include/limits.h \
   /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h \
@@ -496,7 +497,7 @@ src/CMakeFiles/kompass.dir/main.cpp.o: ../src/main.cpp \
   /usr/include/qt/QtCore/qrandom.h \
   /usr/include/c++/10.2.0/random \
   /usr/include/c++/10.2.0/bits/random.h \
-  /usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/opt_random.h \
+  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/opt_random.h \
   /usr/include/c++/10.2.0/bits/random.tcc \
   /usr/include/qt/QtCore/qreadwritelock.h \
   /usr/include/qt/QtCore/qrect.h \
@@ -692,8 +693,8 @@ src/CMakeFiles/kompass.dir/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/10.2.0/cwctype \
   /usr/include/wctype.h \
   /usr/include/bits/wctype-wchar.h \
-  /usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/ctype_base.h \
-  /usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/ctype_inline.h \
+  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/ctype_base.h \
+  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/ctype_inline.h \
   /usr/include/c++/10.2.0/bits/locale_facets.tcc \
   /usr/include/c++/10.2.0/bits/basic_ios.tcc \
   /usr/include/c++/10.2.0/bits/ostream.tcc \
@@ -701,22 +702,26 @@ src/CMakeFiles/kompass.dir/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/10.2.0/bits/istream.tcc \
   /usr/include/c++/10.2.0/fstream \
   /usr/include/c++/10.2.0/bits/codecvt.h \
-  /usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/basic_file.h \
-  /usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/c++io.h \
+  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/basic_file.h \
+  /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/c++io.h \
   /usr/include/c++/10.2.0/bits/fstream.tcc \
-  /usr/include/iio.h \
-  /usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/include/stdbool.h \
-  /usr/include/c++/10.2.0/math.h
+  /usr/include/c++/10.2.0/math.h \
+  /usr/include/qt/QtCore/QObject \
+  src/kompass_autogen/include/main.moc
 
 src/CMakeFiles/kompass.dir/qrc_resources.cpp.o: src/qrc_resources.cpp \
   /usr/include/stdc-predef.h
 
 
+src/kompass_autogen/include/main.moc:
+
 /usr/include/c++/10.2.0/math.h:
 
-/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/include/stdbool.h:
-
 /usr/include/c++/10.2.0/bits/fstream.tcc:
+
+/usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/c++io.h:
+
+/usr/include/c++/10.2.0/fstream:
 
 /usr/include/c++/10.2.0/bits/istream.tcc:
 
@@ -728,11 +733,11 @@ src/CMakeFiles/kompass.dir/qrc_resources.cpp.o: src/qrc_resources.cpp \
 
 /usr/include/c++/10.2.0/bits/locale_facets.tcc:
 
+/usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/ctype_base.h:
+
 /usr/include/wctype.h:
 
 /usr/include/c++/10.2.0/cwctype:
-
-/usr/include/c++/10.2.0/bits/basic_ios.h:
 
 /usr/include/c++/10.2.0/ios:
 
@@ -752,11 +757,15 @@ src/CMakeFiles/kompass.dir/qrc_resources.cpp.o: src/qrc_resources.cpp \
 
 /usr/include/qt/QtQml/qqmlscriptstring.h:
 
+/usr/include/qt/QtQml/qqmlexpression.h:
+
 /usr/include/bits/posix2_lim.h:
 
 /usr/include/wchar.h:
 
-/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/include-fixed/limits.h:
+/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed/syslimits.h:
+
+/usr/include/bits/byteswap.h:
 
 /usr/include/qt/QtCore/qstringbuilder.h:
 
@@ -766,13 +775,21 @@ src/CMakeFiles/kompass.dir/qrc_resources.cpp.o: src/qrc_resources.cpp \
 
 /usr/include/c++/10.2.0/bits/stl_bvector.h:
 
+/usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/gthr-default.h:
+
 /usr/include/bits/types/__mbstate_t.h:
 
 /usr/include/qt/QtCore/qmimetype.h:
 
-/usr/include/c++/10.2.0/tuple:
+/usr/include/qt/QtCore/qbytearraylist.h:
 
-/usr/include/qt/QtNetwork/qudpsocket.h:
+/usr/include/c++/10.2.0/bits/uses_allocator.h:
+
+/usr/include/qt/QtCore/qtextboundaryfinder.h:
+
+/usr/include/qt/QtNetwork/qhstspolicy.h:
+
+/usr/include/c++/10.2.0/tuple:
 
 /usr/include/c++/10.2.0/bits/stl_tempbuf.h:
 
@@ -782,13 +799,11 @@ src/CMakeFiles/kompass.dir/qrc_resources.cpp.o: src/qrc_resources.cpp \
 
 /usr/include/qt/QtNetwork/qhostinfo.h:
 
+/usr/include/qt/QtCore/qstringmatcher.h:
+
 /usr/include/c++/10.2.0/bits/streambuf.tcc:
 
 /usr/include/c++/10.2.0/bits/locale_classes.tcc:
-
-/usr/include/qt/QtCore/qpair.h:
-
-/usr/include/bits/types/clock_t.h:
 
 /usr/include/c++/10.2.0/mutex:
 
@@ -806,12 +821,6 @@ src/CMakeFiles/kompass.dir/qrc_resources.cpp.o: src/qrc_resources.cpp \
 
 /usr/include/bits/cpu-set.h:
 
-/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/include-fixed/syslimits.h:
-
-/usr/include/c++/10.2.0/bits/stl_iterator_base_types.h:
-
-/usr/include/qt/QtCore/qthreadpool.h:
-
 /usr/include/qt/QtCore/qthread.h:
 
 /usr/include/bits/types/error_t.h:
@@ -820,15 +829,9 @@ src/CMakeFiles/kompass.dir/qrc_resources.cpp.o: src/qrc_resources.cpp \
 
 /usr/include/linux/errno.h:
 
-/usr/include/limits.h:
-
-/usr/include/qt/QtNetwork/qnetworksession.h:
-
 /usr/include/c++/10.2.0/cerrno:
 
-/usr/include/c++/10.2.0/bits/functional_hash.h:
-
-/usr/include/bits/types/struct_FILE.h:
+/usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/error_constants.h:
 
 /usr/include/qt/QtCore/qalgorithms.h:
 
@@ -836,13 +839,17 @@ src/CMakeFiles/kompass.dir/qrc_resources.cpp.o: src/qrc_resources.cpp \
 
 /usr/include/c++/10.2.0/ext/alloc_traits.h:
 
-/usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/atomic_word.h:
+/usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/atomic_word.h:
 
-/usr/include/bits/endian.h:
+/usr/include/c++/10.2.0/chrono:
 
-/usr/include/qt/QtCore/qscopedpointer.h:
+/usr/include/bits/types/struct___jmp_buf_tag.h:
 
-/usr/include/c++/10.2.0/string:
+/usr/include/bits/waitstatus.h:
+
+/usr/include/bits/wchar.h:
+
+/usr/include/qt/QtCore/qresultstore.h:
 
 /usr/include/bits/errno.h:
 
@@ -854,27 +861,15 @@ src/CMakeFiles/kompass.dir/qrc_resources.cpp.o: src/qrc_resources.cpp \
 
 /usr/include/bits/types/struct_sched_param.h:
 
-/usr/include/sched.h:
+/usr/include/bits/floatn.h:
 
-/usr/include/bits/fp-fast.h:
+/usr/include/sys/cdefs.h:
 
-/usr/include/qt/QtCore/qbytearraylist.h:
-
-/usr/include/c++/10.2.0/bits/uses_allocator.h:
-
-/usr/include/qt/QtCore/qtextboundaryfinder.h:
-
-/usr/include/qt/QtNetwork/qhstspolicy.h:
-
-/usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/gthr-default.h:
-
-src/kompass_autogen/mocs_compilation.cpp:
-
-/usr/include/c++/10.2.0/fstream:
-
-/usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/gthr.h:
+/usr/include/qt/QtCore/qmath.h:
 
 /usr/include/c++/10.2.0/ext/atomicity.h:
+
+/usr/include/bits/endian.h:
 
 /usr/include/c++/10.2.0/bits/int_limits.h:
 
@@ -908,12 +903,6 @@ src/kompass_autogen/mocs_compilation.cpp:
 
 /usr/include/c++/10.2.0/bits/localefwd.h:
 
-/usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/error_constants.h:
-
-/usr/include/bits/types/__fpos64_t.h:
-
-/usr/include/qt/QtCore/qtemporaryfile.h:
-
 /usr/include/locale.h:
 
 /usr/include/qt/QtNetwork/qtnetwork-config.h:
@@ -940,113 +929,25 @@ src/kompass_autogen/mocs_compilation.cpp:
 
 /usr/include/c++/10.2.0/bits/range_cmp.h:
 
-/usr/include/bits/floatn-common.h:
+/usr/include/c++/10.2.0/string:
+
+/usr/include/qt/QtCore/qscopedpointer.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include/stdarg.h:
+
+/usr/include/qt/QtCore/qcborstreamreader.h:
 
 /usr/include/ctype.h:
 
-/usr/include/gnu/stubs-lp64.h:
-
 /usr/include/bits/math-vector.h:
 
-/usr/include/c++/10.2.0/debug/assertions.h:
+/usr/include/qt/QtCore/qtcoreversion.h:
 
-/usr/include/qt/QtCore/qlogging.h:
+/usr/include/qt/QtCore/qstringlistmodel.h:
 
-/usr/include/c++/10.2.0/bits/uniform_int_dist.h:
+/usr/include/c++/10.2.0/bits/stl_iterator_base_types.h:
 
-/usr/include/qt/QtWidgets/QApplication:
-
-/usr/include/c++/10.2.0/debug/debug.h:
-
-/usr/include/qt/QtCore/qcoreevent.h:
-
-/usr/include/qt/QtCore/QVector:
-
-/usr/include/qt/QtCore/qstate.h:
-
-/usr/include/qt/QtNetwork/qsctpserver.h:
-
-/usr/include/bits/uintn-identity.h:
-
-/usr/include/qt/QtQml/QtQmlDepends:
-
-/usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/ctype_base.h:
-
-/usr/include/qt/QtCore/qplugin.h:
-
-/usr/include/qt/QtCore/qobject.h:
-
-/usr/include/qt/QtCore/qvector.h:
-
-/usr/include/qt/QtCore/qversiontagging.h:
-
-src/qrc_resources.cpp:
-
-/usr/include/c++/10.2.0/bits/stl_algobase.h:
-
-/usr/include/qt/QtCore/qstringalgorithms.h:
-
-/usr/include/bits/floatn.h:
-
-/usr/include/sys/cdefs.h:
-
-/usr/include/qt/QtCore/qmath.h:
-
-/usr/include/c++/10.2.0/bits/cxxabi_init_exception.h:
-
-/usr/include/c++/10.2.0/algorithm:
-
-../src/main.cpp:
-
-/usr/include/qt/QtCore/qcompilerdetection.h:
-
-/usr/include/qt/QtCore/qstringmatcher.h:
-
-/usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/c++config.h:
-
-/usr/include/c++/10.2.0/iterator:
-
-/usr/include/bits/types/struct_timeval.h:
-
-/usr/include/qt/QtGui/qtguiglobal.h:
-
-/usr/include/c++/10.2.0/bits/ptr_traits.h:
-
-/usr/include/qt/QtCore/qstringliteral.h:
-
-/usr/include/c++/10.2.0/bits/list.tcc:
-
-/usr/include/qt/QtCore/qcborvalue.h:
-
-/usr/include/bits/types/locale_t.h:
-
-/usr/include/c++/10.2.0/ext/numeric_traits.h:
-
-/usr/include/alloca.h:
-
-/usr/include/c++/10.2.0/type_traits:
-
-/usr/include/qt/QtCore/qarraydata.h:
-
-/usr/include/qt/QtCore/qdeadlinetimer.h:
-
-/usr/include/qt/QtCore/qregexp.h:
-
-/usr/include/qt/QtCore/qjsondocument.h:
-
-/usr/include/qt/QtWidgets/qapplication.h:
-
-/usr/include/qt/QtCore/qitemselectionmodel.h:
-
-/usr/include/qt/QtCore/QtCore:
-
-/usr/include/qt/QtNetwork/qhostaddress.h:
-
-/usr/include/bits/time64.h:
-
-/usr/include/c++/10.2.0/bits/atomic_base.h:
-
-/usr/include/qt/QtCore/QList:
+/usr/include/qt/QtCore/qthreadpool.h:
 
 /usr/include/c++/10.2.0/bits/stl_iterator_base_funcs.h:
 
@@ -1062,7 +963,109 @@ src/qrc_resources.cpp:
 
 /usr/include/qt/QtCore/qprocess.h:
 
-/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/include/stddef.h:
+/usr/include/c++/10.2.0/bits/list.tcc:
+
+/usr/include/qt/QtCore/qcborvalue.h:
+
+/usr/include/bits/types/locale_t.h:
+
+/usr/include/c++/10.2.0/ext/numeric_traits.h:
+
+/usr/include/alloca.h:
+
+/usr/include/c++/10.2.0/debug/assertions.h:
+
+/usr/include/qt/QtCore/qlogging.h:
+
+/usr/include/c++/10.2.0/bits/uniform_int_dist.h:
+
+/usr/include/qt/QtWidgets/QApplication:
+
+/usr/include/c++/10.2.0/debug/debug.h:
+
+/usr/include/qt/QtCore/qcoreevent.h:
+
+/usr/include/qt/QtCore/QVector:
+
+/usr/include/sched.h:
+
+/usr/include/bits/fp-fast.h:
+
+/usr/include/qt/QtCore/qstate.h:
+
+/usr/include/qt/QtNetwork/qsctpserver.h:
+
+/usr/include/bits/uintn-identity.h:
+
+/usr/include/qt/QtQml/QtQmlDepends:
+
+/usr/include/qt/QtCore/qplugin.h:
+
+/usr/include/qt/QtCore/qobject.h:
+
+/usr/include/qt/QtNetwork/qnetworksession.h:
+
+/usr/include/limits.h:
+
+/usr/include/qt/QtCore/qvector.h:
+
+/usr/include/qt/QtCore/qversiontagging.h:
+
+src/qrc_resources.cpp:
+
+/usr/include/c++/10.2.0/bits/stl_algobase.h:
+
+/usr/include/qt/QtCore/qstringalgorithms.h:
+
+/usr/include/c++/10.2.0/bits/cxxabi_init_exception.h:
+
+/usr/include/c++/10.2.0/algorithm:
+
+../src/main.cpp:
+
+/usr/include/qt/QtCore/qcompilerdetection.h:
+
+/usr/include/bits/types/clock_t.h:
+
+/usr/include/qt/QtCore/qpair.h:
+
+/usr/include/qt/QtNetwork/qudpsocket.h:
+
+/usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/os_defines.h:
+
+/usr/include/qt/QtGui/qtguiglobal.h:
+
+/usr/include/c++/10.2.0/type_traits:
+
+/usr/include/qt/QtCore/qarraydata.h:
+
+/usr/include/qt/QtCore/qdeadlinetimer.h:
+
+/usr/include/c++/10.2.0/bits/basic_ios.h:
+
+/usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/c++config.h:
+
+/usr/include/qt/QtCore/qnamespace.h:
+
+/usr/include/qt/QtCore/qregexp.h:
+
+/usr/include/qt/QtCore/qjsondocument.h:
+
+/usr/include/qt/QtWidgets/qapplication.h:
+
+/usr/include/qt/QtCore/qitemselectionmodel.h:
+
+/usr/include/qt/QtCore/QtCore:
+
+/usr/include/qt/QtNetwork/qhostaddress.h:
+
+/usr/include/c++/10.2.0/bits/functional_hash.h:
+
+/usr/include/bits/types/struct_FILE.h:
+
+/usr/include/bits/time64.h:
+
+/usr/include/c++/10.2.0/bits/atomic_base.h:
 
 /usr/include/bits/types/struct_tm.h:
 
@@ -1070,21 +1073,17 @@ src/qrc_resources.cpp:
 
 /usr/include/qt/QtCore/qconfig.h:
 
-/usr/include/bits/waitstatus.h:
-
-/usr/include/bits/wchar.h:
-
-/usr/include/qt/QtCore/qresultstore.h:
-
 /usr/include/bits/timesize.h:
 
 /usr/include/qt/QtCore/qwineventnotifier.h:
 
-/usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/c++allocator.h:
+/usr/include/qt/QtCore/qstringliteral.h:
 
 /usr/include/stdc-predef.h:
 
-/usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/ctype_inline.h:
+/usr/include/bits/floatn-common.h:
+
+/usr/include/c++/10.2.0/bits/ptr_traits.h:
 
 /usr/include/c++/10.2.0/list:
 
@@ -1092,33 +1091,39 @@ src/qrc_resources.cpp:
 
 /usr/include/c++/10.2.0/bits/stl_function.h:
 
-/usr/include/bits/byteswap.h:
+/usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/c++allocator.h:
+
+/usr/include/qt/QtCore/qcontainertools_impl.h:
 
 /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:
 
 /usr/include/qt/QtNetwork/qnetworkconfigmanager.h:
 
+/usr/include/qt/QtCore/QList:
+
+/usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/cpu_defines.h:
+
 /usr/include/c++/10.2.0/bits/iterator_concepts.h:
 
 /usr/include/qt/QtCore/qprocessordetection.h:
 
-/usr/include/c++/10.2.0/bits/atomic_lockfree_defines.h:
+/usr/include/qt/QtCore/qabstractanimation.h:
 
 /usr/include/c++/10.2.0/bits/allocated_ptr.h:
-
-/usr/include/iio.h:
 
 /usr/include/c++/10.2.0/bits/stl_relops.h:
 
 /usr/include/qt/QtCore/qstandardpaths.h:
 
-/usr/include/qt/QtCore/QDeadlineTimer:
+/usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/gthr.h:
 
-/usr/include/c++/10.2.0/ext/type_traits.h:
+/usr/include/qt/QtCore/QDeadlineTimer:
 
 /usr/include/qt/QtCore/qstringlist.h:
 
 /usr/include/qt/QtCore/qglobal.h:
+
+/usr/include/c++/10.2.0/ext/type_traits.h:
 
 /usr/include/qt/QtWidgets/qtwidgetsglobal.h:
 
@@ -1153,6 +1158,8 @@ src/qrc_resources.cpp:
 /usr/include/qt/QtCore/qsysinfo.h:
 
 /usr/include/c++/10.2.0/cstdio:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed/limits.h:
 
 /usr/include/assert.h:
 
@@ -1196,8 +1203,6 @@ src/qrc_resources.cpp:
 
 /usr/include/qt/QtCore/qcontainerfwd.h:
 
-/usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/os_defines.h:
-
 /usr/include/c++/10.2.0/stdexcept:
 
 /usr/include/c++/10.2.0/bits/shared_ptr_atomic.h:
@@ -1224,6 +1229,8 @@ src/qrc_resources.cpp:
 
 /usr/include/qt/QtCore/qcryptographichash.h:
 
+/usr/include/bits/select.h:
+
 /usr/include/qt/QtCore/qlist.h:
 
 /usr/include/c++/10.2.0/bits/stl_tree.h:
@@ -1236,15 +1243,9 @@ src/qrc_resources.cpp:
 
 /usr/include/qt/QtCore/qsharedpointer_impl.h:
 
+src/kompass_autogen/mocs_compilation.cpp:
+
 /usr/include/c++/10.2.0/bits/predefined_ops.h:
-
-/usr/include/qt/QtCore/qobject_impl.h:
-
-/usr/include/qt/QtQml/qqmlprivate.h:
-
-/usr/include/qt/QtCore/qnumeric.h:
-
-/usr/include/bits/types/__sigset_t.h:
 
 /usr/include/c++/10.2.0/vector:
 
@@ -1258,13 +1259,23 @@ src/qrc_resources.cpp:
 
 /usr/include/qt/QtCore/qabstractproxymodel.h:
 
+/usr/include/c++/10.2.0/iterator:
+
+/usr/include/bits/types/struct_timeval.h:
+
+/usr/include/qt/QtCore/qobject_impl.h:
+
+/usr/include/qt/QtCore/qnumeric.h:
+
+/usr/include/bits/types/__sigset_t.h:
+
+/usr/include/qt/QtQml/qqmlprivate.h:
+
 /usr/include/c++/10.2.0/bits/std_abs.h:
 
 /usr/include/bits/types/struct_timespec.h:
 
 /usr/include/c++/10.2.0/bits/locale_classes.h:
-
-/usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/c++locale.h:
 
 /usr/include/qt/QtCore/qglobalstatic.h:
 
@@ -1294,21 +1305,19 @@ src/qrc_resources.cpp:
 
 /usr/include/bits/stdlib-float.h:
 
+/usr/include/c++/10.2.0/bits/stl_construct.h:
+
+/usr/include/bits/pthreadtypes-arch.h:
+
 /usr/include/gnu/stubs.h:
 
 /usr/include/qt/QtCore/qbasicatomic.h:
 
 /usr/include/c++/10.2.0/bits/random.tcc:
 
-/usr/include/bits/pthreadtypes-arch.h:
-
 /usr/include/bits/types/sigset_t.h:
 
 /usr/include/c++/10.2.0/bits/exception.h:
-
-/usr/include/qt/QtNetwork/qsslcertificate.h:
-
-/usr/include/qt/QtCore/qvariant.h:
 
 /usr/include/c++/10.2.0/bits/postypes.h:
 
@@ -1328,9 +1337,13 @@ src/qrc_resources.cpp:
 
 /usr/include/asm-generic/errno.h:
 
+/usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/basic_file.h:
+
 /usr/include/qt/QtNetwork/qabstractsocket.h:
 
 /usr/include/qt/QtCore/qchar.h:
+
+/usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/opt_random.h:
 
 /usr/include/c++/10.2.0/limits:
 
@@ -1350,8 +1363,6 @@ src/qrc_resources.cpp:
 
 /usr/include/qt/QtCore/qxmlstream.h:
 
-/usr/include/qt/QtCore/qcontainertools_impl.h:
-
 /usr/include/qt/QtCore/qflags.h:
 
 /usr/include/c++/10.2.0/bits/exception_defines.h:
@@ -1364,21 +1375,17 @@ src/qrc_resources.cpp:
 
 /usr/include/qt/QtCore/QUrl:
 
-/usr/include/c++/10.2.0/bits/stl_construct.h:
+/usr/include/c++/10.2.0/bits/atomic_lockfree_defines.h:
 
-/usr/include/bits/select.h:
+/usr/include/qt/QtCore/qvariant.h:
 
-/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/include/stdint.h:
-
-/usr/include/qt/QtCore/qhistorystate.h:
+/usr/include/qt/QtNetwork/qsslcertificate.h:
 
 /usr/include/qt/QtCore/qfuturesynchronizer.h:
 
 /usr/include/c++/10.2.0/bits/stl_uninitialized.h:
 
 /usr/include/qt/QtCore/qcoreapplication.h:
-
-/usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/opt_random.h:
 
 /usr/include/qt/QtCore/qstatemachine.h:
 
@@ -1389,8 +1396,6 @@ src/qrc_resources.cpp:
 /usr/include/c++/10.2.0/bits/refwrap.h:
 
 /usr/include/qt/QtCore/QFlags:
-
-/usr/include/qt/QtCore/qnamespace.h:
 
 /usr/include/qt/QtCore/qmetatype.h:
 
@@ -1412,12 +1417,6 @@ src/qrc_resources.cpp:
 
 /usr/include/qt/QtCore/qbuffer.h:
 
-/usr/include/c++/10.2.0/chrono:
-
-/usr/include/qt/QtCore/qstringlistmodel.h:
-
-/usr/include/qt/QtCore/qtcoreversion.h:
-
 /usr/include/c++/10.2.0/bits/parse_numbers.h:
 
 /usr/include/qt/QtCore/qeventloop.h:
@@ -1438,11 +1437,15 @@ src/qrc_resources.cpp:
 
 /usr/include/qt/QtGui/qcursor.h:
 
+/usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/ctype_inline.h:
+
 /usr/include/bits/flt-eval-method.h:
 
 /usr/include/qt/QtCore/qlocale.h:
 
 /usr/include/qt/QtCore/qurl.h:
+
+/usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/c++locale.h:
 
 /usr/include/qt/QtCore/qmap.h:
 
@@ -1490,17 +1493,21 @@ src/qrc_resources.cpp:
 
 /usr/include/qt/QtQml/qtqmlglobal.h:
 
-/usr/include/qt/QtQml/qqmlexpression.h:
-
 /usr/include/qt/QtQml/qtqml-config.h:
 
 /usr/include/qt/QtQml/qqmldebug.h:
 
 /usr/include/qt/QtQml/qqml.h:
 
+/usr/include/qt/QtQml/qqmlerror.h:
+
+/usr/include/qt/QtCore/qendian.h:
+
 /usr/include/qt/QtQml/qqmlparserstatus.h:
 
 /usr/include/qt/QtQml/qqmllist.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include/stdint.h:
 
 /usr/include/c++/10.2.0/bits/shared_ptr.h:
 
@@ -1528,8 +1535,6 @@ src/qrc_resources.cpp:
 
 /usr/include/bits/libm-simd-decl-stubs.h:
 
-/usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/c++io.h:
-
 /usr/include/qt/QtCore/qhashfunctions.h:
 
 /usr/include/qt/QtCore/qset.h:
@@ -1541,12 +1546,6 @@ src/qrc_resources.cpp:
 /usr/include/bits/iscanonical.h:
 
 /usr/include/qt/QtCore/qcontiguouscache.h:
-
-/usr/include/qt/QtCore/qendian.h:
-
-/usr/include/qt/QtQml/qqmlerror.h:
-
-/usr/include/qt/QtCore/qabstractanimation.h:
 
 /usr/include/bits/long-double.h:
 
@@ -1576,8 +1575,6 @@ src/qrc_resources.cpp:
 
 /usr/include/qt/QtCore/qbitarray.h:
 
-/usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/cpu_defines.h:
-
 /usr/include/qt/QtCore/qcache.h:
 
 /usr/include/qt/QtCore/qcalendar.h:
@@ -1587,8 +1584,6 @@ src/qrc_resources.cpp:
 /usr/include/qt/QtCore/quuid.h:
 
 /usr/include/qt/QtCore/qcbormap.h:
-
-/usr/include/qt/QtCore/qcborstreamreader.h:
 
 /usr/include/qt/QtCore/qfloat16.h:
 
@@ -1620,8 +1615,6 @@ src/qrc_resources.cpp:
 
 /usr/include/qt/QtCore/qeasingcurve.h:
 
-/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/include/stdarg.h:
-
 /usr/include/qt/QtCore/qeventtransition.h:
 
 /usr/include/qt/QtCore/qfactoryinterface.h:
@@ -1643,6 +1636,10 @@ src/qrc_resources.cpp:
 /usr/include/c++/10.2.0/bits/std_mutex.h:
 
 /usr/include/qt/QtCore/qfuturewatcher.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include/stddef.h:
+
+/usr/include/qt/QtCore/qhistorystate.h:
 
 /usr/include/qt/QtCore/qidentityproxymodel.h:
 
@@ -1698,17 +1695,15 @@ src/qrc_resources.cpp:
 
 /usr/include/qt/QtCore/qobjectcleanuphandler.h:
 
-/usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/basic_file.h:
-
 /usr/include/qt/QtCore/qoperatingsystemversion.h:
 
 /usr/include/strings.h:
 
 /usr/include/qt/QtCore/qparallelanimationgroup.h:
 
-/usr/include/qt/QtCore/qmargins.h:
-
 /usr/include/qt/QtNetwork/qsslcipher.h:
+
+/usr/include/qt/QtCore/qmargins.h:
 
 /usr/include/qt/QtCore/qpluginloader.h:
 
@@ -1772,6 +1767,10 @@ src/qrc_resources.cpp:
 
 /usr/include/qt/QtCore/qtemporarydir.h:
 
+/usr/include/bits/types/__fpos64_t.h:
+
+/usr/include/qt/QtCore/qtemporaryfile.h:
+
 /usr/include/qt/QtCore/qanimationgroup.h:
 
 /usr/include/qt/QtCore/qtextcodec.h:
@@ -1781,6 +1780,8 @@ src/qrc_resources.cpp:
 /usr/include/qt/QtNetwork/qtnetworkversion.h:
 
 /usr/include/c++/10.2.0/bits/atomic_futex.h:
+
+/usr/include/gnu/stubs-64.h:
 
 /usr/include/c++/10.2.0/bits/stl_raw_storage_iter.h:
 

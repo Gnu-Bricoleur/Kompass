@@ -1,18 +1,18 @@
 src/CMakeFiles/kompass.dir/main.cpp.o: \
- /home/sylvain/Documents/Kompass/src/main.cpp /usr/include/stdc-predef.h \
- /usr/include/qt/QtWidgets/QApplication \
+ /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/src/main.cpp \
+ /usr/include/stdc-predef.h /usr/include/qt/QtWidgets/QApplication \
  /usr/include/qt/QtWidgets/qapplication.h \
  /usr/include/qt/QtWidgets/qtwidgetsglobal.h \
  /usr/include/qt/QtGui/qtguiglobal.h /usr/include/qt/QtCore/qglobal.h \
  /usr/include/c++/10.2.0/type_traits \
- /usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/c++config.h \
- /usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/os_defines.h \
+ /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/c++config.h \
+ /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/os_defines.h \
  /usr/include/features.h /usr/include/sys/cdefs.h \
  /usr/include/bits/wordsize.h /usr/include/bits/long-double.h \
- /usr/include/gnu/stubs.h /usr/include/gnu/stubs-lp64.h \
- /usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/cpu_defines.h \
+ /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
+ /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/cpu_defines.h \
  /usr/include/c++/10.2.0/cstddef \
- /usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/include/stddef.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include/stddef.h \
  /usr/include/c++/10.2.0/utility \
  /usr/include/c++/10.2.0/bits/stl_relops.h \
  /usr/include/c++/10.2.0/bits/stl_pair.h \
@@ -77,7 +77,7 @@ src/CMakeFiles/kompass.dir/main.cpp.o: \
  /usr/include/qt/QtCore/qatomic_cxx11.h \
  /usr/include/qt/QtCore/qgenericatomic.h /usr/include/c++/10.2.0/atomic \
  /usr/include/c++/10.2.0/bits/atomic_base.h \
- /usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/include/stdint.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/wchar.h \
  /usr/include/bits/stdint-uintn.h \
  /usr/include/c++/10.2.0/bits/atomic_lockfree_defines.h \
@@ -91,7 +91,7 @@ src/CMakeFiles/kompass.dir/main.cpp.o: \
  /usr/include/qt/QtCore/qnamespace.h /usr/include/qt/QtCore/qarraydata.h \
  /usr/include/string.h /usr/include/strings.h \
  /usr/include/c++/10.2.0/stdlib.h \
- /usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/include/stdarg.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include/stdarg.h \
  /usr/include/c++/10.2.0/string /usr/include/c++/10.2.0/bits/stringfwd.h \
  /usr/include/c++/10.2.0/bits/memoryfwd.h \
  /usr/include/c++/10.2.0/bits/char_traits.h \
@@ -101,10 +101,10 @@ src/CMakeFiles/kompass.dir/main.cpp.o: \
  /usr/include/bits/types/__mbstate_t.h /usr/include/bits/types/__FILE.h \
  /usr/include/bits/types/FILE.h /usr/include/c++/10.2.0/cstdint \
  /usr/include/c++/10.2.0/bits/allocator.h \
- /usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/c++allocator.h \
+ /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/c++allocator.h \
  /usr/include/c++/10.2.0/ext/new_allocator.h \
  /usr/include/c++/10.2.0/bits/localefwd.h \
- /usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/c++locale.h \
+ /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/c++locale.h \
  /usr/include/c++/10.2.0/clocale /usr/include/locale.h \
  /usr/include/bits/locale.h /usr/include/c++/10.2.0/iosfwd \
  /usr/include/c++/10.2.0/cctype /usr/include/ctype.h \
@@ -119,14 +119,15 @@ src/CMakeFiles/kompass.dir/main.cpp.o: \
  /usr/include/c++/10.2.0/bits/int_limits.h \
  /usr/include/c++/10.2.0/bits/basic_string.h \
  /usr/include/c++/10.2.0/ext/atomicity.h \
- /usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/gthr.h \
- /usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/gthr-default.h \
+ /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/gthr.h \
+ /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/gthr-default.h \
  /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
  /usr/include/bits/types/struct_sched_param.h /usr/include/bits/cpu-set.h \
  /usr/include/time.h /usr/include/bits/time.h /usr/include/bits/timex.h \
  /usr/include/bits/types/struct_tm.h \
  /usr/include/bits/types/struct_itimerspec.h /usr/include/bits/setjmp.h \
- /usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/atomic_word.h \
+ /usr/include/bits/types/struct___jmp_buf_tag.h \
+ /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/atomic_word.h \
  /usr/include/c++/10.2.0/ext/alloc_traits.h \
  /usr/include/c++/10.2.0/bits/alloc_traits.h \
  /usr/include/c++/10.2.0/ext/string_conversions.h \
@@ -150,7 +151,7 @@ src/CMakeFiles/kompass.dir/main.cpp.o: \
  /usr/include/c++/10.2.0/bits/locale_classes.h \
  /usr/include/c++/10.2.0/bits/locale_classes.tcc \
  /usr/include/c++/10.2.0/system_error \
- /usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/error_constants.h \
+ /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/error_constants.h \
  /usr/include/c++/10.2.0/stdexcept \
  /usr/include/c++/10.2.0/bits/streambuf.tcc \
  /usr/include/qt/QtCore/qstringliteral.h \
@@ -179,8 +180,8 @@ src/CMakeFiles/kompass.dir/main.cpp.o: \
  /usr/include/c++/10.2.0/bits/allocated_ptr.h \
  /usr/include/c++/10.2.0/ext/aligned_buffer.h \
  /usr/include/c++/10.2.0/bits/list.tcc \
- /usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/include-fixed/limits.h \
- /usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/include-fixed/syslimits.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed/limits.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed/syslimits.h \
  /usr/include/limits.h /usr/include/bits/posix1_lim.h \
  /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
  /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
@@ -360,7 +361,7 @@ src/CMakeFiles/kompass.dir/main.cpp.o: \
  /usr/include/qt/QtCore/qeasingcurve.h /usr/include/qt/QtCore/qqueue.h \
  /usr/include/qt/QtCore/qrandom.h /usr/include/c++/10.2.0/random \
  /usr/include/c++/10.2.0/bits/random.h \
- /usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/opt_random.h \
+ /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/opt_random.h \
  /usr/include/c++/10.2.0/bits/random.tcc \
  /usr/include/qt/QtCore/qreadwritelock.h /usr/include/qt/QtCore/qrect.h \
  /usr/include/qt/QtCore/qrefcount.h /usr/include/qt/QtCore/qregexp.h \
@@ -516,15 +517,15 @@ src/CMakeFiles/kompass.dir/main.cpp.o: \
  /usr/include/c++/10.2.0/bits/locale_facets.h \
  /usr/include/c++/10.2.0/cwctype /usr/include/wctype.h \
  /usr/include/bits/wctype-wchar.h \
- /usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/ctype_base.h \
- /usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/ctype_inline.h \
+ /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/ctype_base.h \
+ /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/ctype_inline.h \
  /usr/include/c++/10.2.0/bits/locale_facets.tcc \
  /usr/include/c++/10.2.0/bits/basic_ios.tcc \
  /usr/include/c++/10.2.0/bits/ostream.tcc /usr/include/c++/10.2.0/istream \
  /usr/include/c++/10.2.0/bits/istream.tcc /usr/include/c++/10.2.0/fstream \
  /usr/include/c++/10.2.0/bits/codecvt.h \
- /usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/basic_file.h \
- /usr/include/c++/10.2.0/aarch64-unknown-linux-gnu/bits/c++io.h \
- /usr/include/c++/10.2.0/bits/fstream.tcc /usr/include/iio.h \
- /usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/include/stdbool.h \
- /usr/include/c++/10.2.0/math.h
+ /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/basic_file.h \
+ /usr/include/c++/10.2.0/x86_64-pc-linux-gnu/bits/c++io.h \
+ /usr/include/c++/10.2.0/bits/fstream.tcc /usr/include/c++/10.2.0/math.h \
+ /usr/include/qt/QtCore/QObject \
+ /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src/kompass_autogen/include/main.moc

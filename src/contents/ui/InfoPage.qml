@@ -1,12 +1,11 @@
 import QtQuick 2.7
 import org.kde.kirigami 2.4 as Kirigami
 import QtQuick.Controls 2.15 as Controls
+import QtQuick.Layouts 1.2
 
-Kirigami.ApplicationWindow {
-    id: root
-    visible: true
-    width: 480
-    height: 620
+Kirigami.Page {
+    id: infoPage
+
 
     GridLayout {
         anchors.fill: parent

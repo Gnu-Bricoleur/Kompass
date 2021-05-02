@@ -3,50 +3,50 @@ import org.kde.kirigami 2.4 as Kirigami
 import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.2
 
-Kirigami.ApplicationWindow {
-    id: root
+
+
+Kirigami.Page {
+    id: kompassPage
     title: "Kompass"
-
-    globalDrawer: Kirigami.GlobalDrawer {
-        title: "Menu"
-        titleIcon: "applications-graphics"
-
-        actions: [
-            Kirigami.Action {
-                text: "Advanced view"
-                onTriggered: pageStack.push(Qt.resolvedUrl("DevPage.qml"))
-                //targetPage: "DevPage.qml"
-            },
-            Kirigami.Action {
-                text: "Info"
-                onTriggered: pageStack.push(Qt.resolvedUrl("InfoPage.qml"))
-                //targetPage: "gallery/InfoPage.qml"
-            }
-        ]
-    }
-ColumnLayout {
+    ColumnLayout {
         width: root.width
         height: root.height
         spacing: 10
-    Text {
-        id: helloText
-        text: "Kompass"
-        anchors.horizontalCenter: parent.horizontalCenter
-        font.pointSize: 24; font.bold: true
-    }
-    Item{
-        Layout.fillWidth: true
+        Text {
+            id: helloText
+            text: "Kompass"
+            anchors.horizontalCenter: parent.horizontalCenter
+            font.pointSize: 24; font.bold: true
+        }
+        Item{
+            Layout.fillWidth: true
             Layout.fillHeight: true
-    Image {
-        id: imagePhoto
-        source: "qrc:/kompass_hand"
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.verticalCenter: parent.verticalCenter
-        width: parent.width > parent.height ? parent.height : parent.width
-        height: parent.width > parent.height ? parent.height : parent.width
-        transformOrigin: Item.Center
-        rotation: 90
-        objectName: "kompass_hand"
+            property var rot: 100
+            Image {
+                id: imagePhoto
+                source: "qrc:/kompass_hand"
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.verticalCenter: parent.verticalCenter
+                width: parent.width > parent.height ? parent.height : parent.width
+                height: parent.width > parent.height ? parent.height : parent.width
+                transformOrigin: Item.Center
+                rotation: applicationData.heading
+                //rotation: applicationData.heading
+                objectName: "kompass_hand"
+                Connections {
+                target: applicationData
+                onValueChanged: console.log("The value has changed to: " + applicationData.heading)
+            }
+            }
+
+            //Timer {
+                //id: textTimer
+                //interval: 100
+                //repeat: true
+                //running: true
+                //triggeredOnStart: true
+                //onTriggered: imagePhoto.set()
+            //}
+        }
     }
-    }
-}}
+}

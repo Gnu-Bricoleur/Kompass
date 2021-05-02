@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sylvain/Documents/Kompass
+CMAKE_SOURCE_DIR = /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sylvain/Documents/Kompass/build
+CMAKE_BINARY_DIR = /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build
 
 # Utility rule file for kompass_autogen.
 
@@ -67,8 +67,8 @@ include src/CMakeFiles/kompass_autogen.dir/compiler_depend.make
 include src/CMakeFiles/kompass_autogen.dir/progress.make
 
 src/CMakeFiles/kompass_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sylvain/Documents/Kompass/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target kompass"
-	cd /home/sylvain/Documents/Kompass/build/src && /usr/bin/cmake -E cmake_autogen /home/sylvain/Documents/Kompass/build/src/CMakeFiles/kompass_autogen.dir/AutogenInfo.json Debug
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target kompass"
+	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src && /usr/bin/cmake -E cmake_autogen /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src/CMakeFiles/kompass_autogen.dir/AutogenInfo.json Debug
 
 kompass_autogen: src/CMakeFiles/kompass_autogen
 kompass_autogen: src/CMakeFiles/kompass_autogen.dir/build.make
@@ -79,10 +79,10 @@ src/CMakeFiles/kompass_autogen.dir/build: kompass_autogen
 .PHONY : src/CMakeFiles/kompass_autogen.dir/build
 
 src/CMakeFiles/kompass_autogen.dir/clean:
-	cd /home/sylvain/Documents/Kompass/build/src && $(CMAKE_COMMAND) -P CMakeFiles/kompass_autogen.dir/cmake_clean.cmake
+	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src && $(CMAKE_COMMAND) -P CMakeFiles/kompass_autogen.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/kompass_autogen.dir/clean
 
 src/CMakeFiles/kompass_autogen.dir/depend:
-	cd /home/sylvain/Documents/Kompass/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sylvain/Documents/Kompass /home/sylvain/Documents/Kompass/src /home/sylvain/Documents/Kompass/build /home/sylvain/Documents/Kompass/build/src /home/sylvain/Documents/Kompass/build/src/CMakeFiles/kompass_autogen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/src /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src /home/sylvain/Desktop/1-SAUVEGARDE/Documents/Loisirs/Pinephone/manjaroKompass/Kompass/build/src/CMakeFiles/kompass_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/kompass_autogen.dir/depend
 

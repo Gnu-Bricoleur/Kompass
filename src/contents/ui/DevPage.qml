@@ -6,11 +6,12 @@ import org.kde.kirigami 2.4 as Kirigami
 Kirigami.Page
 {
     title: "Developper view"
-ColumnLayout {
+    id: devPage
+    ColumnLayout {
         width: root.width
         height: root.height
         spacing: 10
-    Row{
+        Row{
             spacing: 10
             Controls.Label {
                 text:  "x"
@@ -30,5 +31,6 @@ ColumnLayout {
                 objectName: "vec"
             }
         }
-}}
+    }
+}
 
