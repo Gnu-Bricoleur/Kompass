@@ -30,11 +30,21 @@ int angle;
 class ApplicationData : public QObject
 {
    Q_OBJECT
+   Q_PROPERTY(int angle READ angle WRITE setAngle NOTIFY angleChanged)
  public:
-     int heading;
-   Q_INVOKABLE int getAzimuth() const {
-    return angle;
-   }
+     void setAngle(const int &a) {
+        if (a != m_angle) {
+            m_angle = a;
+            emit angleChanged();
+        }
+    }
+    int angle() const {
+        return m_angle;
+    }
+signals:
+    void angleChanged();
+    private:
+    int m_angle;
 };
 
 ApplicationData data;
@@ -65,8 +75,7 @@ void updateCompass(){
 // 		angle += 360;
 // 	}
     angle += 5;
-	qDebug() << data.heading;
-    data.heading = angle;
+    data.setAngle(angle);
 	//kompass_hand->setProperty("rotation", angle);
 }
 
@@ -83,9 +92,6 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
 
-
-
-    data.heading = 45;
     engine.rootContext()->setContextProperty("applicationData", &data);
 
 

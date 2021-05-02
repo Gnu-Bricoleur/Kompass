@@ -30,23 +30,13 @@ Kirigami.Page {
                 width: parent.width > parent.height ? parent.height : parent.width
                 height: parent.width > parent.height ? parent.height : parent.width
                 transformOrigin: Item.Center
-                rotation: applicationData.heading
-                //rotation: applicationData.heading
+                rotation: applicationData.angle
                 objectName: "kompass_hand"
                 Connections {
                 target: applicationData
-                onValueChanged: console.log("The value has changed to: " + applicationData.heading)
+                onValueChanged: console.log("The value has changed to: " + angle)
             }
             }
-
-            //Timer {
-                //id: textTimer
-                //interval: 100
-                //repeat: true
-                //running: true
-                //triggeredOnStart: true
-                //onTriggered: imagePhoto.set()
-            //}
         }
     }
 }

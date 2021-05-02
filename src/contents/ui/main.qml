@@ -11,7 +11,7 @@ Kirigami.ApplicationWindow
         actions: [
             Kirigami.Action {
                 text: "Kompass"
-                onTriggered: {pageStack.replace(Qt.resolvedUrl("KompassPage.qml")); applicationData}
+                onTriggered: {pageStack.replace(Qt.resolvedUrl("KompassPage.qml"))}
             },
             Kirigami.Action {
                 text: "Advanced view"
@@ -29,7 +29,7 @@ Kirigami.ApplicationWindow
         anchors.fill: parent
         initialItem: Qt.resolvedUrl("KompassPage.qml")
     }*/
-    pageStack.initialPage: Qt.resolvedUrl("KompassPage.qml")
+    pageStack.initialPage: {Qt.resolvedUrl("KompassPage.qml")}
 
 
 }
