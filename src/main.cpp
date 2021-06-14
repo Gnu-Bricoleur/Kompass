@@ -16,48 +16,33 @@ struct iio_channel *chx;
 struct iio_channel *chy;
 struct iio_channel *chz;
 
-QObject *qmlx;
-QObject *qmly;
-QObject *qmlz;
-QObject *qmlvec;
 QObject *kompass_hand;
 double minx, maxx, miny, maxy;
 
 void updateCompass(){
 	double ax, ay, az;
 	int angle = 0;
-	iio_channel_attr_read_double(chx, "raw", &ax);
+
+    //Read the magnetic field strength on the 3 axis from the magnetometer
+    iio_channel_attr_read_double(chx, "raw", &ax);
 	iio_channel_attr_read_double(chy, "raw", &ay);
 	iio_channel_attr_read_double(chz, "raw", &az);
-	//qDebug() << ax << ", " << ay << ", " << az;
 
+    //If a value outside of the default range is read, then update the range to improve the scaling
 	if (ax<minx){minx = ax;}
-    	if (ax>maxx){maxx = ax;}
-    	if (ay<miny){miny = ay;}
-    	if (ay>maxy){maxy = ay;}
+    if (ax>maxx){maxx = ax;}
+    if (ay<miny){miny = ay;}
+    if (ay>maxy){maxy = ay;}
 
-
-
-
-	//minx = -5256;
-	//maxx = 1714;
-	//miny = -2358;
-	//maxy = 4122;
-
-	
+    //Scale the readings on axes X and Y
 	ax = ((ax-minx)/(maxx-minx)*3.14)-1.55;
 	ay = ((ay-miny)/(maxy-miny)*3.14)-1.55;
-	qDebug() << ax << ", " << ay << ", " << az;
-	//qDebug() << minx << ", " << maxx << ", " << miny << "," << maxy;
 
-	QVariant varx = ax;
-	QVariant vary = ay;
-	QVariant varz = az;
-	//qmlx->setProperty("text", varx);
-	//qmly->setProperty("text", vary);
-	//qmlz->setProperty("text", varz);
-    	angle = atan2(ay, ax)*180/3.14;
+    //Calculate the heading
+   	angle = atan2(ay, ax)*180/3.14;
 	angle = angle + 180;
+
+    //Calculte the 360 modulo of the angle
 	while(angle>360){
 		angle -= 360;
 	}
@@ -65,7 +50,8 @@ void updateCompass(){
 		angle += 360;
 	}
 	angle = 360-angle;
-	qDebug() << angle;
+
+    //Set the compass hand angle
 	kompass_hand->setProperty("rotation", angle);
 }
 
@@ -74,43 +60,39 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 {
     QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QApplication app(argc, argv);
-    QCoreApplication::setOrganizationName("KDE");
-    QCoreApplication::setOrganizationDomain("kde.org");
+    //QCoreApplication::setOrganizationName("KDE");
+    //QCoreApplication::setOrganizationDomain("kde.org");
     QCoreApplication::setApplicationName("Kompass");
 
+    //Load the main page
     QQmlApplicationEngine engine;
-
     engine.load(QUrl(QStringLiteral("qrc:///KompassPage.qml")));
-
-    qDebug() << "Jusqu'ici tout va bien";
     
+    //Find the hand object
     QObject *rootObject = engine.rootObjects().first();
-    qDebug() << "Jusqu'ici tout va bien";
-    qmlx = rootObject->findChild<QObject*>("x");
-    qmly = rootObject->findChild<QObject*>("y");
-    qmlz = rootObject->findChild<QObject*>("z");
     kompass_hand = rootObject->findChild<QObject*>("kompass_hand");
-    qDebug() << "Jusqu'ici tout va bien";
 
+    //Create iio structure and contexts
     struct iio_context *ctx = iio_create_default_context();
     struct iio_device *dev = iio_context_find_device(ctx, "lis3mdl");
 
+    //Find the 3 magnetometers channels
     chx = iio_device_find_channel(dev, "magn_x", false);
     chy = iio_device_find_channel(dev, "magn_y", false);
     chz = iio_device_find_channel(dev, "magn_z", false);
 
-    iio_channel_attr_read_double(chx, "raw", &minx);
-	iio_channel_attr_read_double(chy, "raw", &miny);
-    iio_channel_attr_read_double(chx, "raw", &maxx);
-	iio_channel_attr_read_double(chy, "raw", &maxy);
-    //struct iio_context *confctx = iio_create_context_from_uri("ip:localhost");
-    //struct iio_device *confdev = iio_context_find_device(confctx, "lis3mdl");
-    //int reto = iio_device_attr_write_double(confdev, "sampling_frequency", 1);
-    //qDebug() << reto << "succes ?";
+    //Start a timer to call periodically a function reading the magnetometer values
     QTimer timer;
     QObject::connect(&timer, &QTimer::timeout, updateCompass);
-    timer.start(50);
+    timer.start(50);    //every 50ms
 
+    //Set sane default values for the possible range of readings for scaling
+    //minx = -5256;
+	//maxx = 1714;
+	//miny = -2358;
+	//maxy = 4122;
+
+    //Launch the application
     if (engine.rootObjects().isEmpty()) {
         return -1;
     }
