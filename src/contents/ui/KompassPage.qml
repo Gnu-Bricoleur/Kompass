@@ -11,7 +11,6 @@ Kirigami.Page {
     ColumnLayout {
         width: root.width
         height: root.height
-        spacing: 10
         Text {
             id: helloText
             text: "Kompass"
@@ -21,7 +20,6 @@ Kirigami.Page {
         Item{
             Layout.fillWidth: true
             Layout.fillHeight: true
-            property var rot: 100
             Image {
                 id: imagePhoto
                 source: "qrc:/kompass_hand"
@@ -32,10 +30,6 @@ Kirigami.Page {
                 transformOrigin: Item.Center
                 rotation: applicationData.angle
                 objectName: "kompass_hand"
-                //Connections {
-                //    target: applicationData
-                //    onValueChanged: console.log("The value has changed to: " + angle)
-                //}
             }
         }
     }
