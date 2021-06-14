@@ -9,7 +9,9 @@ Clone the repository, install the required depencies for the compilation and com
 ```
 git clone git@github.com:Gnu-Bricoleur/Kompass.git
 sudo pacman -Syu git cmake make extra-cmake-modules base-devel libiio
+mkdir build
 cd build
+cmake ..
 make
 sudo make install
 ```
