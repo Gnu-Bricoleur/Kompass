@@ -1,6 +1,0 @@
-# Hashes of file build rules.
-f60cf492f09c03c24c704ae1a3e85e67 CMakeFiles/fetch-translations
-6da2dd37434ca8ecc7eef7b36aeb7f33 CMakeFiles/uninstall
-014f491c334c4f29ca3f62a3cc1e339a releaseme
-87e2f1d1e6560243e959e5d43ce437b9 src/CMakeFiles/kompass_autogen
-a1b3b02e7a135b7af34e2c6bf9c56d27 src/qrc_resources.cpp

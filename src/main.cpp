@@ -10,51 +10,49 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <iio.h>
+#include <math.h>
 
-static struct iio_context *ctx   = NULL;
+struct iio_channel *chx;
+struct iio_channel *chy;
+struct iio_channel *chz;
 
-#define IIO_ENSURE(expr) { \
-	if (!(expr)) { \
-		(void) fprintf(stderr, "assertion failed (%s:%d)\n", __FILE__, __LINE__); \
-		(void) abort(); \
-	} \
-}
-
-
-/* returns LIS3MDL phy device */
-static struct iio_device* get_lis3mdl(struct iio_context *ctx)
-{
-	struct iio_device *dev =  iio_context_find_device(ctx, "lis3mdl");
-	IIO_ENSURE(dev && "No lis3mdl found");
-	return dev;
-}
-QObject *qmlx;
-QObject *qmly;
-QObject *qmlz;
-QObject *qmlvec;
+QObject *kompass_hand;
+double minx, maxx, miny, maxy;
 
 void updateCompass(){
-	FILE *xraw, *yraw, *zraw;
-	int n, ax, ay, az;
-	/*xraw = fopen("/sys/bus/iio/devices/iio\:device2/in_magn_x_raw", "r");
-	yraw = fopen("/sys/bus/iio/devices/iio\:device2/in_magn_y_raw", "r");
-	zraw = fopen("/sys/bus/iio/devices/iio\:device2/in_magn_z_raw", "r");
-	fscanf(xraw, "%d", &ax);
-	fscanf(yraw, "%d", &ay);
-	fscanf(zraw, "%d", &az);
-	fclose(xraw);
-	fclose(yraw);
-	fclose(zraw);*/
-	ax = 0;
-	ay = 0;
-	az = 0;
-	QVariant varx = ax;
-	QVariant vary = ay;
-	QVariant varz = az;
+	double ax, ay, az;
+	int angle = 0;
 
-	qmlx->setProperty("text", varx);
-	qmly->setProperty("text", vary);
-	qmlz->setProperty("text", varz);
+    //Read the magnetic field strength on the 3 axis from the magnetometer
+    iio_channel_attr_read_double(chx, "raw", &ax);
+	iio_channel_attr_read_double(chy, "raw", &ay);
+	iio_channel_attr_read_double(chz, "raw", &az);
+
+    //If a value outside of the default range is read, then update the range to improve the scaling
+	if (ax<minx){minx = ax;}
+    if (ax>maxx){maxx = ax;}
+    if (ay<miny){miny = ay;}
+    if (ay>maxy){maxy = ay;}
+
+    //Scale the readings on axes X and Y
+	ax = ((ax-minx)/(maxx-minx)*3.14)-1.55;
+	ay = ((ay-miny)/(maxy-miny)*3.14)-1.55;
+
+    //Calculate the heading
+   	angle = atan2(ay, ax)*180/3.14;
+	angle = angle + 180;
+
+    //Calculte the 360 modulo of the angle
+	while(angle>360){
+		angle -= 360;
+	}
+	while (angle < 0){
+		angle += 360;
+	}
+	angle = 360-angle;
+
+    //Set the compass hand angle
+	kompass_hand->setProperty("rotation", angle);
 }
 
 
@@ -62,99 +60,39 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 {
     QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QApplication app(argc, argv);
-    QCoreApplication::setOrganizationName("KDE");
-    QCoreApplication::setOrganizationDomain("kde.org");
+    //QCoreApplication::setOrganizationName("KDE");
+    //QCoreApplication::setOrganizationDomain("kde.org");
     QCoreApplication::setApplicationName("Kompass");
 
+    //Load the main page
     QQmlApplicationEngine engine;
-
-    engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
-
-    qDebug() << "Jusqu'ici tout va bien";
+    engine.load(QUrl(QStringLiteral("qrc:///KompassPage.qml")));
     
+    //Find the hand object
     QObject *rootObject = engine.rootObjects().first();
-    qDebug() << "Jusqu'ici tout va bien";
-    qmlx = rootObject->findChild<QObject*>("x");
-    qmly = rootObject->findChild<QObject*>("y");
-    qmlz = rootObject->findChild<QObject*>("z");
-    qDebug() << "Jusqu'ici tout va bien";
+    kompass_hand = rootObject->findChild<QObject*>("kompass_hand");
 
-/*    struct iio_context* ctx;
-    ctx = iio_create_local_context();
-    if (!ctx) return 1;    
-    iio_device* dev = get_lis3mdl(ctx);//iio_context_get_device(ctx, "lis3mdl");
-    if(nullptr == dev)
-    {
-        return 7;
-    }
-    std::cout << "device : " << dev << endl;
-
-    // Enable all channels
-    unsigned int num_channels = iio_device_get_channels_count(dev);
-    for (unsigned int i = 0; i < num_channels; i++)
-    {
-        iio_channel* chn = iio_device_get_channel(dev, i);
-        iio_channel_enable(chn);
-
-        std::string chn_name;
-        {
-            const char *name = iio_channel_get_name(chn);
-            if (name!=NULL)
-                chn_name = name;
-            else
-                chn_name = iio_channel_get_id(chn);
-        }
-        bool is_output = iio_channel_is_output(chn);
-        std::cout << " enabled ch" << i << " : " << chn_name << (is_output ? "(output)":"(input)") << endl;
-double val;
-        iio_channel_attr_read_double(chn, 0, &val);
-        qDebug() << val;
-
-
-    }
-
-    size_t samples_count=1024*num_channels;
-*/
-    //iio_buffer *buffer;
-    //buffer = iio_device_create_buffer(dev, samples_count, true);
-/*
-   if (!buffer)
-    {
-        std::cout << "Unable to allocate buffer"<<endl;
-        return 7;
-    }
-*/
-    //while (true)
-    //{
-//	double val;
-//	iio_channel_attr_read_double(chn, 0, &val);
-//	std::cout << val << endl;
-        //int ret = iio_buffer_refill(buffer);
-        //if (ret < 0) {
-        //    std::cout << "Unable to refill buffer" << endl;
-        //    break;
-        //}
-
-        //iio_buffer_foreach_sample(buffer, print_sample, NULL);
-        //fflush(stdout);
-    //}
-    double value;
+    //Create iio structure and contexts
     struct iio_context *ctx = iio_create_default_context();
     struct iio_device *dev = iio_context_find_device(ctx, "lis3mdl");
-    struct iio_channel *ch = iio_device_find_channel(dev, "magn_x", false);
-while(true){    
-int ret = iio_channel_attr_read_double(ch, "raw", &value);
-    if (ret < 0)
-        printf("Unable to read RSSI: %i\n", ret);
-    else
-        printf("RSSI: %f\n", value);
 
-    //iio_context_destroy(ctx);
-    }
-   // QTimer timer;
-   // QObject::connect(&timer, &QTimer::timeout, updateCompass);
-   // timer.start(50);
+    //Find the 3 magnetometers channels
+    chx = iio_device_find_channel(dev, "magn_x", false);
+    chy = iio_device_find_channel(dev, "magn_y", false);
+    chz = iio_device_find_channel(dev, "magn_z", false);
 
+    //Start a timer to call periodically a function reading the magnetometer values
+    QTimer timer;
+    QObject::connect(&timer, &QTimer::timeout, updateCompass);
+    timer.start(50);    //every 50ms
+
+    //Set sane default values for the possible range of readings for scaling
+    //minx = -5256;
+	//maxx = 1714;
+	//miny = -2358;
+	//maxy = 4122;
+
+    //Launch the application
     if (engine.rootObjects().isEmpty()) {
         return -1;
     }

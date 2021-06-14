@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
-        <file alias="main.qml">contents/ui/main.qml</file>
+        <file alias="KompassPage.qml">contents/ui/KompassPage.qml</file>
+        <file alias="kompass_hand">contents/ui/kompass.png</file>
     </qresource>
 </RCC>
