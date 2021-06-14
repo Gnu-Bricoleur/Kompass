@@ -39,10 +39,10 @@ void updateCompass(){
 
 
 
-	minx = -5256;
-	maxx = 1714;
-	miny = -2358;
-	maxy = 4122;
+	//minx = -5256;
+	//maxx = 1714;
+	//miny = -2358;
+	//maxy = 4122;
 
 	
 	ax = ((ax-minx)/(maxx-minx)*3.14)-1.55;
@@ -57,7 +57,7 @@ void updateCompass(){
 	//qmly->setProperty("text", vary);
 	//qmlz->setProperty("text", varz);
     	angle = atan2(ay, ax)*180/3.14;
-	//angle = angle *2;
+	angle = angle + 180;
 	while(angle>360){
 		angle -= 360;
 	}
